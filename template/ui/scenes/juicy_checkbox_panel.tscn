@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://byisttmte7h8w"]
+
+[ext_resource type="Theme" uid="uid://cpn5fmpmla1su" path="res://assets/themes/default.tres" id="1_ejhh4"]
+[ext_resource type="Script" uid="uid://ujvp75by55p1" path="res://template/ui/scenes/juicy_checkbox_panel.gd" id="2_kq06b"]
+[ext_resource type="PackedScene" uid="uid://d4dmefyprq0ha" path="res://template/ui/scenes/juicy_check_box.tscn" id="3_hqduc"]
+
+[node name="JuicyCheckBoxPanel" type="MarginContainer" unique_id=657693057]
+offset_right = 274.0
+offset_bottom = 160.0
+theme = ExtResource("1_ejhh4")
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+script = ExtResource("2_kq06b")
+text = "Complete Task"
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=511620944]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=184404054]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1785402360]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="JuicyCheckBox" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=1459659889 instance=ExtResource("3_hqduc")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=157502653]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 0
+text = "Complete Task"
+horizontal_alignment = 2

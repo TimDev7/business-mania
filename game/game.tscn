@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://mlhphrxeel2o"]
+
+[ext_resource type="PackedScene" uid="uid://d11yi8ohsccdu" path="res://template/game/base_game.tscn" id="1_bk3v5"]
+[ext_resource type="Script" uid="uid://c4ihkv1b3l8id" path="res://game/game.gd" id="2_1r4le"]
+[ext_resource type="PackedScene" uid="uid://dv67siuj3mtl0" path="res://game/scenes/background_manager/background_manager.tscn" id="3_4fuuu"]
+[ext_resource type="PackedScene" uid="uid://d24wjur6qhcul" path="res://game/scenes/transition_manager/transition_manager.tscn" id="4_dxrkv"]
+
+[node name="Game" unique_id=1361593517 instance=ExtResource("1_bk3v5")]
+script = ExtResource("2_1r4le")
+
+[node name="BackgroundManager" parent="GameData" parent_id_path=PackedInt32Array(1029004650) index="0" unique_id=38855730 instance=ExtResource("3_4fuuu")]
+layer = -999
+
+[node name="TransitionManager" parent="GameData" parent_id_path=PackedInt32Array(1029004650) index="1" unique_id=71479453 instance=ExtResource("4_dxrkv")]

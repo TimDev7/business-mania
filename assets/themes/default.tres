@@ -1,0 +1,21 @@
+[gd_resource type="Theme" format=3 uid="uid://cpn5fmpmla1su"]
+
+[ext_resource type="Texture2D" uid="uid://b13s0b128864d" path="res://template/ui/template_atlas.png" id="1_02yda"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8gun"]
+atlas = ExtResource("1_02yda")
+region = Rect2(0, 192, 48, 48)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2jh8c"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+texture = SubResource("AtlasTexture_c8gun")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[resource]
+Panel/styles/panel = SubResource("StyleBoxTexture_2jh8c")

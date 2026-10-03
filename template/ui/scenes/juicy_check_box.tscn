@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://d4dmefyprq0ha"]
+
+[ext_resource type="Script" uid="uid://b5luaw5bo78e4" path="res://template/ui/scenes/juicy_check_box.gd" id="1_6dy23"]
+[ext_resource type="Texture2D" uid="uid://b13s0b128864d" path="res://template/ui/template_atlas.png" id="1_ytibe"]
+[ext_resource type="PackedScene" uid="uid://cxlr8nmotfbdk" path="res://template/ui/components/juicy_button_component.tscn" id="2_6dy23"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2f55"]
+atlas = ExtResource("1_ytibe")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3cfvr"]
+texture = SubResource("AtlasTexture_w2f55")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijeb4"]
+atlas = ExtResource("1_ytibe")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_udj8g"]
+texture = SubResource("AtlasTexture_ijeb4")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_djuiw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pm3rg"]
+atlas = SubResource("CompressedTexture2D_djuiw")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_51l8s"]
+texture = SubResource("AtlasTexture_pm3rg")
+modulate_color = Color(1.353256, 1.353256, 1.353256, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k5vk6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s265k"]
+atlas = SubResource("CompressedTexture2D_k5vk6")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5mj20"]
+texture = SubResource("AtlasTexture_s265k")
+modulate_color = Color(1.353256, 1.353256, 1.353256, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c42qu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsm4x"]
+atlas = SubResource("CompressedTexture2D_c42qu")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i85jf"]
+texture = SubResource("AtlasTexture_vsm4x")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mel2l"]
+size = Vector2(0, 0)
+
+[node name="JuicyCheckBox" type="AspectRatioContainer" unique_id=1459659889 node_paths=PackedStringArray("button")]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+script = ExtResource("1_6dy23")
+button = NodePath("Button")
+
+[node name="Button" type="CheckBox" parent="." unique_id=1644616794]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxTexture_3cfvr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_udj8g")
+theme_override_styles/hover = SubResource("StyleBoxTexture_51l8s")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_5mj20")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_i85jf")
+theme_override_icons/checked = SubResource("PlaceholderTexture2D_mel2l")
+theme_override_icons/unchecked = SubResource("PlaceholderTexture2D_mel2l")
+theme_override_icons/radio_checked = SubResource("PlaceholderTexture2D_mel2l")
+theme_override_icons/radio_unchecked = SubResource("PlaceholderTexture2D_mel2l")
+theme_override_icons/checked_disabled = SubResource("PlaceholderTexture2D_mel2l")
+theme_override_icons/unchecked_disabled = SubResource("PlaceholderTexture2D_mel2l")
+theme_override_icons/radio_checked_disabled = SubResource("PlaceholderTexture2D_mel2l")
+theme_override_icons/radio_unchecked_disabled = SubResource("PlaceholderTexture2D_mel2l")
+
+[node name="JuicyButtonComponent" parent="Button" unique_id=437082904 instance=ExtResource("2_6dy23")]

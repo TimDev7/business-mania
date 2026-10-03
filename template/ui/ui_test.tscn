@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://bb1a8rk74yiy3"]
+
+[ext_resource type="Theme" uid="uid://cpn5fmpmla1su" path="res://assets/themes/default.tres" id="1_wrubf"]
+[ext_resource type="Script" uid="uid://dhhqrq8hnlnig" path="res://template/ui/ui_test.gd" id="2_db6u0"]
+[ext_resource type="PackedScene" uid="uid://dbxuyb5djs8as" path="res://template/ui/scenes/game_window.tscn" id="2_icgfc"]
+[ext_resource type="PackedScene" uid="uid://cxlr8nmotfbdk" path="res://template/ui/components/juicy_button_component.tscn" id="2_l745i"]
+[ext_resource type="PackedScene" uid="uid://byisttmte7h8w" path="res://template/ui/scenes/juicy_checkbox_panel.tscn" id="5_db6u0"]
+[ext_resource type="PackedScene" uid="uid://cyh2y5xqsy7is" path="res://template/ui/scenes/juicy_progress_bar.tscn" id="6_enwq8"]
+[ext_resource type="PackedScene" uid="uid://cg7q5bdw21c6f" path="res://template/ui/components/juicy_slider_component.tscn" id="7_74c7v"]
+[ext_resource type="Texture2D" uid="uid://c5quqyhs7dgn4" path="res://template/game/game_node_icon.svg" id="8_4tx6f"]
+[ext_resource type="Texture2D" uid="uid://cmw8i08lf5r0r" path="res://template/core/core_node_icon.svg" id="9_y6u8o"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_4tx6f"]
+size = Vector2(0, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_y6u8o"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2jh8c"]
+size = Vector2(0, 0)
+
+[node name="UiTest" type="Control" unique_id=1362653785]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_wrubf")
+script = ExtResource("2_db6u0")
+
+[node name="GameWindow" parent="." unique_id=656352947 instance=ExtResource("2_icgfc")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1286302031]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=111211248]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=5.0 connected=1]Wave Wave Wave[/wave]"
+fit_content = true
+horizontal_alignment = 1
+custom_effects = [null]
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer" unique_id=960999252]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[tornado radius=10.0 freq=1.0 connected=1]Tornado Tornado[/tornado]"
+fit_content = true
+horizontal_alignment = 1
+custom_effects = [null]
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="VBoxContainer" unique_id=593421910]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[shake rate=20.0 level=5 connected=1]Shake Shake Shake[/shake]"
+fit_content = true
+horizontal_alignment = 1
+custom_effects = [null]
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="VBoxContainer" unique_id=1926915546]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[fade start=4 length=14]Fade Fade Fade[/fade]"
+fit_content = true
+horizontal_alignment = 1
+custom_effects = [null]
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="VBoxContainer" unique_id=2077191521]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[rainbow freq=0.01 sat=1 val=1 speed=20]Rainbow Rainbow[/rainbow]"
+fit_content = true
+horizontal_alignment = 1
+custom_effects = [null]
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1655877312]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 48
+text = "Open window"
+
+[node name="JuicyComponent" parent="VBoxContainer/Button" unique_id=437082904 instance=ExtResource("2_l745i")]
+
+[node name="JuicyCheckbox" parent="VBoxContainer" unique_id=201145097 instance=ExtResource("5_db6u0")]
+layout_mode = 2
+
+[node name="JuicyProgressBar" parent="VBoxContainer" unique_id=1892883523 instance=ExtResource("6_enwq8")]
+custom_minimum_size = Vector2(480, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+value_change_trans = 0
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer" unique_id=468589392]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme_override_icons/grabber = SubResource("PlaceholderTexture2D_4tx6f")
+theme_override_icons/grabber_highlight = SubResource("PlaceholderTexture2D_4tx6f")
+theme_override_icons/grabber_disabled = SubResource("PlaceholderTexture2D_4tx6f")
+theme_override_icons/tick = SubResource("PlaceholderTexture2D_y6u8o")
+
+[node name="JuicySliderComponent" parent="VBoxContainer/HSlider" unique_id=142041353 instance=ExtResource("7_74c7v")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+juicy_slider_tex = ExtResource("8_4tx6f")
+juicy_slider_pressed_tex = ExtResource("9_y6u8o")
+juicy_slider_normal_scale = Vector2(2, 2)
+juicy_slider_up_scale = Vector2(2.2, 2.2)
+juicy_slider_down_scale = Vector2(1.8, 1.8)
+
+[node name="VSlider" type="VSlider" parent="VBoxContainer" unique_id=510684432]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_icons/grabber = SubResource("PlaceholderTexture2D_2jh8c")
+theme_override_icons/grabber_highlight = SubResource("PlaceholderTexture2D_2jh8c")
+theme_override_icons/grabber_disabled = SubResource("PlaceholderTexture2D_2jh8c")
+
+[node name="JuicySliderComponent" parent="VBoxContainer/VSlider" unique_id=137695758 instance=ExtResource("7_74c7v")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+juicy_slider_tex = ExtResource("8_4tx6f")
+juicy_slider_pressed_tex = ExtResource("9_y6u8o")
+juicy_slider_normal_scale = Vector2(1, 1)
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="value_changed" from="VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]

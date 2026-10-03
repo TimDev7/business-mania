@@ -1,0 +1,6 @@
+[gd_scene format=2]
+
+[ext_resource type="Script" uid="uid://bjng5m1jcnj25" path="res://template/game/scenes/event_bus/event_bus.gd" id="1"]
+
+[node name="EventBus" type="Node"]
+script = ExtResource( 1 )

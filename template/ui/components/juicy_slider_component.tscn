@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cg7q5bdw21c6f"]
+
+[ext_resource type="Script" uid="uid://b16eac4dyyesc" path="res://template/ui/components/juicy_slider_component.gd" id="1_c37lt"]
+
+[node name="JuicySliderComponent" type="Control" unique_id=137695758]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("1_c37lt")
+juicy_slider_normal_scale = null
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=729265170]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="JuicySliderControl" type="Control" parent="MarginContainer" unique_id=100823422]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+
+[node name="JuicySlider" type="TextureRect" parent="MarginContainer/JuicySliderControl" unique_id=639716791]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+expand_mode = 1
+stretch_mode = 3

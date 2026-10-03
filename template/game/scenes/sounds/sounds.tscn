@@ -1,0 +1,6 @@
+[gd_scene format=2]
+
+[ext_resource type="Script" uid="uid://csnw88jbtrdr4" path="res://template/game/scenes/sounds/sounds.gd" id="1"]
+
+[node name="Sounds" type="Node"]
+script = ExtResource( 1 )
