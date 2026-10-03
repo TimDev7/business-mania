@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d11yi8ohsccdu"]
+
+[ext_resource type="Script" uid="uid://dfjp3cnhmmdoa" path="res://template/game/base_game.gd" id="1"]
+[ext_resource type="PackedScene" path="res://template/game/scenes/sounds/sounds.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://template/game/scenes/game_data/game_data.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://template/game/scenes/event_bus/event_bus.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://template/game/scenes/sound_manager/sound_manager.tscn" id="6"]
+
+[node name="BaseGame" type="Node" unique_id=1148680645]
+script = ExtResource("1")
+
+[node name="GameData" parent="." unique_id=1029004650 instance=ExtResource("3")]
+
+[node name="Sounds" parent="GameData" unique_id=731680392 instance=ExtResource("2")]
+
+[node name="EventBus" parent="." unique_id=78128717 instance=ExtResource("4")]
+
+[node name="SoundManager" parent="." unique_id=574681124 instance=ExtResource("6")]

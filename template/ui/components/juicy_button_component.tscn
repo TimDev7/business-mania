@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cxlr8nmotfbdk"]
+
+[ext_resource type="Script" uid="uid://0m5vo1j1mv5l" path="res://template/ui/components/juicy_button_component.gd" id="1_ykbh6"]
+
+[node name="JuicyButtonComponent" type="Node" unique_id=437082904]
+script = ExtResource("1_ykbh6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=622632052]
+bus = &"SFX"

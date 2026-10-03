@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://icah7wgo47lp"]
+
+[ext_resource type="PackedScene" uid="uid://cxlr8nmotfbdk" path="res://template/ui/components/juicy_button_component.tscn" id="1_8jn3i"]
+
+[node name="JuicyButton" type="TextureButton" unique_id=717374595]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="JuicyButtonComponent" parent="." unique_id=437082904 instance=ExtResource("1_8jn3i")]

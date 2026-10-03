@@ -1,0 +1,6 @@
+[gd_scene format=2]
+
+[ext_resource type="Script" uid="uid://jfibkyxk5grx" path="res://template/game/scenes/sound_manager/sound_manager.gd" id="1"]
+
+[node name="SoundManager" type="Node"]
+script = ExtResource( 1 )

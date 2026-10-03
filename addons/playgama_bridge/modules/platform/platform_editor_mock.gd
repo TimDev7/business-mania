@@ -1,0 +1,47 @@
+signal audio_state_changed
+signal pause_state_changed
+
+var id : get = _id_getter
+var payload : get = _payload_getter
+var language : get = _language_getter
+var tld : get = _tld_getter
+var is_audio_enabled : get = _is_audio_enabled_getter
+var is_external_calls_supported : get = _is_external_calls_supported_getter
+var is_external_links_allowed : get = _is_external_links_allowed_getter
+
+func _id_getter():
+	return "mock"
+
+func _payload_getter():
+	return null
+
+func _language_getter():
+	return "en"
+
+func _tld_getter():
+	return null
+
+func _is_audio_enabled_getter():
+	return _audio_enabled
+
+func _is_external_calls_supported_getter():
+	return true
+
+func _is_external_links_allowed_getter():
+	return true
+
+func send_message(message, options = null):
+	pass
+
+func get_server_time(callback):
+	if callback != null:
+		callback.call(Time.get_unix_time_from_system() * 1000)
+
+var _audio_enabled = true
+
+# Test injection point, same idea as advertisement_editor_mock.gd's
+# _set_interstitial_state/_set_rewarded_state - lets a test simulate arriving
+# on a portal that already has audio disabled before Bridge is even queried,
+# without needing a real audio_state_changed event.
+func _set_audio_enabled(value):
+	_audio_enabled = value

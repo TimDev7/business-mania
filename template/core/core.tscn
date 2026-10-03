@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c5ebbashndm85"]
+
+[ext_resource type="Script" uid="uid://dubn0dfy38ofc" path="res://template/core/core.gd" id="1_mhksw"]
+[ext_resource type="PackedScene" uid="uid://bb2cu7tkt1e5q" path="res://template/core/scenes/event_bus/event_bus.tscn" id="2_6a36g"]
+[ext_resource type="PackedScene" uid="uid://cwpij64lqpq4q" path="res://template/core/scenes/save_manager/save_manager.tscn" id="3_gwk31"]
+[ext_resource type="PackedScene" uid="uid://bhxx1wsswagvf" path="res://template/core/scenes/sound_manager/global_sound.tscn" id="4_2y2qu"]
+
+[node name="Core" type="Node" unique_id=488629837]
+script = ExtResource("1_mhksw")
+
+[node name="EventBus" parent="." unique_id=1245045778 instance=ExtResource("2_6a36g")]
+
+[node name="SaveManager" parent="." unique_id=1304337227 instance=ExtResource("3_gwk31")]
+
+[node name="SoundManager" parent="." unique_id=936198789 instance=ExtResource("4_2y2qu")]
