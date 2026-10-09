@@ -1,0 +1,22 @@
+name = "businessmania-proxy"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+# Разрешённые источники (заголовок Origin). * = любые буквы/цифры/точки/дефисы.
+# Точный домен игры уточняем по ответу GET /ping на первом тестовом запросе.
+ALLOWED_ORIGINS = "https://*.itch.zone,https://itch.io,http://localhost:*,http://127.0.0.1:*"
+GEMINI_MODEL = "gemini-2.5-flash"
+UPSTREAM_TIMEOUT_MS = "7000"
+RATE_LIMIT_PER_MIN = "6"
+DAILY_CAP = "500"
+# GEMINI_THINKING_BUDGET = "0"   # раскомментируй, если модель поддерживает и нужен быстрый ответ
+
+# Счётчики лимитов переживают перезапуск изолята только с KV (иначе - в памяти, best effort):
+#   npx wrangler kv namespace create LIMITS   -> вставь id ниже и раскомментируй
+# [[kv_namespaces]]
+# binding = "LIMITS"
+# id = "<kv-namespace-id>"
+
+# Ключ - только секрет, не в этом файле:
+#   npx wrangler secret put GEMINI_API_KEY

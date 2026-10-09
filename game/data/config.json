@@ -1,0 +1,26 @@
+{
+	"version": 1,
+	"default_language": "ru",
+	"languages": ["ru", "kk", "en"],
+	"cycle_count": 3,
+	"minigames": ["toppings", "purchase", "courier"],
+	"timing": {
+		"cycle_seconds": 90.0,
+		"hint_seconds": 1.0,
+		"minigame_seconds": 8.0,
+		"quiz_seconds": 10.0
+	},
+	"director": {
+		"input_seconds": 60.0,
+		"max_chars": 150,
+		"request_timeout_seconds": 8.0,
+		"mistakes_in_request": 5,
+		"mistakes_explained": 3,
+		"neutral_score": 1,
+		"proxy_url": ""
+	},
+	"final_screen": {
+		"top_mistakes": 3,
+		"learn_more_url": "https://example.com/businessmania-learn"
+	}
+}

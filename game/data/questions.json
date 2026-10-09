@@ -1,0 +1,141 @@
+{
+	"_note": "ЧЕРНОВИК: 9 из 24 вопросов (по 3 на тему), RU+EN. KZ ещё нет - Localizer откатывается на RU. Вопросы и объяснения нужно вычитать вручную (день 13 плана).",
+	"topics": ["credit", "margin", "income_expenses"],
+	"questions": [
+		{
+			"id": "credit_01", "topic": "credit", "correct": 1,
+			"text": {
+				"ru": "Нужна новая печь за 3000. Банк даёт кредит на год под 20%. Сколько всего придётся вернуть?",
+				"en": "A new oven costs 3000. The bank offers a one-year loan at 20%. How much will you repay in total?"
+			},
+			"options": {
+				"ru": ["3 200", "3 600", "4 200", "3 020"],
+				"en": ["3,200", "3,600", "4,200", "3,020"]
+			},
+			"explanation": {
+				"ru": "20% от 3000 - это 600. Возвращать нужно тело кредита плюс проценты: 3000 + 600 = 3600.",
+				"en": "20% of 3000 is 600. You repay the principal plus interest: 3000 + 600 = 3600."
+			}
+		},
+		{
+			"id": "credit_02", "topic": "credit", "correct": 0,
+			"text": {
+				"ru": "Два кредита по 1000 на год. А: 15% годовых. Б: 10% годовых, но комиссия 200 за оформление. Какой дешевле?",
+				"en": "Two one-year loans of 1000. A: 15% a year. B: 10% a year, plus a 200 setup fee. Which is cheaper?"
+			},
+			"options": {
+				"ru": ["А: переплата 150", "Б: переплата 100", "Одинаково", "Сравнить нельзя"],
+				"en": ["A: costs 150 extra", "B: costs 100 extra", "The same", "Can't compare"]
+			},
+			"explanation": {
+				"ru": "У Б проценты 100, но с комиссией переплата 300. У А всего 150. Сравнивай полную стоимость кредита, а не только ставку.",
+				"en": "B has 100 interest but 300 once the fee is added. A costs only 150. Compare the full cost of a loan, not just the rate."
+			}
+		},
+		{
+			"id": "credit_03", "topic": "credit", "correct": 2,
+			"text": {
+				"ru": "Выручка просела, платёж по кредиту через неделю не покрыть. Что разумнее сделать первым?",
+				"en": "Sales dropped and you can't cover the loan payment due next week. What is the smartest first move?"
+			},
+			"options": {
+				"ru": ["Взять новый кредит, чтобы закрыть старый", "Молчать и надеяться на лучшее", "Заранее договориться с банком об отсрочке", "Закрыть пиццерию"],
+				"en": ["Take a new loan to pay the old one", "Stay silent and hope for the best", "Ask the bank for a deferral in advance", "Close the pizzeria"]
+			},
+			"explanation": {
+				"ru": "Банк охотнее идёт навстречу, если предупредить заранее. Новый кредит на старый - это спираль долга, а просрочка портит историю.",
+				"en": "Banks are more flexible when warned early. A new loan to pay an old one starts a debt spiral, and a missed payment hurts your credit record."
+			}
+		},
+		{
+			"id": "margin_01", "topic": "margin", "correct": 0,
+			"text": {
+				"ru": "Продукты на пиццу стоят 150, работа и аренда на одну пиццу ещё 100. Продаём за 400. Прибыль с одной пиццы?",
+				"en": "Ingredients per pizza cost 150, labour and rent add 100 per pizza. You sell it for 400. Profit per pizza?"
+			},
+			"options": {
+				"ru": ["150", "250", "400", "100"],
+				"en": ["150", "250", "400", "100"]
+			},
+			"explanation": {
+				"ru": "Себестоимость пиццы 150 + 100 = 250. Прибыль = цена минус себестоимость: 400 - 250 = 150.",
+				"en": "Cost per pizza is 150 + 100 = 250. Profit = price minus cost: 400 - 250 = 150."
+			}
+		},
+		{
+			"id": "margin_02", "topic": "margin", "correct": 1,
+			"text": {
+				"ru": "Пицца стоит 500, себестоимость 400. Какая доля цены - это прибыль (маржа)?",
+				"en": "A pizza sells for 500 and costs 400 to make. What share of the price is profit (margin)?"
+			},
+			"options": {
+				"ru": ["10%", "20%", "25%", "80%"],
+				"en": ["10%", "20%", "25%", "80%"]
+			},
+			"explanation": {
+				"ru": "Прибыль 100 из цены 500: 100 / 500 = 20%. Маржа считается от цены, а не от себестоимости.",
+				"en": "Profit is 100 out of a 500 price: 100 / 500 = 20%. Margin is measured against the price, not the cost."
+			}
+		},
+		{
+			"id": "margin_03", "topic": "margin", "correct": 3,
+			"text": {
+				"ru": "Сыр подорожал: себестоимость пиццы выросла с 250 до 300, цена 400. Как сохранить прибыль 150 с пиццы?",
+				"en": "Cheese got pricier: cost per pizza rose from 250 to 300 at a 400 price. How do you keep a 150 profit per pizza?"
+			},
+			"options": {
+				"ru": ["Положить сыра вдвое меньше и не говорить", "Ничего не менять", "Снизить цену, чтобы продавать больше", "Поднять цену до 450 или найти поставщика дешевле"],
+				"en": ["Use half the cheese and say nothing", "Change nothing", "Cut the price to sell more", "Raise the price to 450 or find a cheaper supplier"]
+			},
+			"explanation": {
+				"ru": "Прибыль 150 = цена - себестоимость, значит при себестоимости 300 нужна цена 450. Или снижай себестоимость. Скрытая экономия на качестве теряет клиентов.",
+				"en": "Profit 150 = price - cost, so at a cost of 300 you need a 450 price. Or lower the cost. Quietly cutting quality loses customers."
+			}
+		},
+		{
+			"id": "income_01", "topic": "income_expenses", "correct": 2,
+			"text": {
+				"ru": "Что из этого расход пиццерии, а не доход?",
+				"en": "Which of these is a pizzeria expense, not income?"
+			},
+			"options": {
+				"ru": ["Выручка за пиццу", "Продажа напитков", "Зарплата повара", "Оплата доставки клиентом"],
+				"en": ["Pizza sales", "Drink sales", "The cook's salary", "Delivery fee paid by a customer"]
+			},
+			"explanation": {
+				"ru": "Доход - деньги, которые приходят от клиентов. Зарплата - деньги, которые уходят: это расход.",
+				"en": "Income is money coming in from customers. A salary is money going out: that is an expense."
+			}
+		},
+		{
+			"id": "income_02", "topic": "income_expenses", "correct": 0,
+			"text": {
+				"ru": "За месяц выручка 10 000, расходы 8 500. Какая чистая прибыль?",
+				"en": "Monthly revenue is 10,000 and expenses are 8,500. What is the net profit?"
+			},
+			"options": {
+				"ru": ["1 500", "8 500", "10 000", "18 500"],
+				"en": ["1,500", "8,500", "10,000", "18,500"]
+			},
+			"explanation": {
+				"ru": "Чистая прибыль = доходы минус расходы: 10 000 - 8 500 = 1 500.",
+				"en": "Net profit = income minus expenses: 10,000 - 8,500 = 1,500."
+			}
+		},
+		{
+			"id": "income_03", "topic": "income_expenses", "correct": 1,
+			"text": {
+				"ru": "Заказов стало вдвое меньше. Какие расходы упадут сами собой?",
+				"en": "Orders halved. Which expenses will drop on their own?"
+			},
+			"options": {
+				"ru": ["Аренда помещения", "Продукты на пиццу", "Зарплата администратора", "Платёж по кредиту"],
+				"en": ["Rent", "Ingredients", "The manager's salary", "The loan payment"]
+			},
+			"explanation": {
+				"ru": "Продукты - переменные расходы: меньше заказов, меньше закупок. Аренда, оклады и кредит - постоянные, они не уменьшатся.",
+				"en": "Ingredients are variable costs: fewer orders, fewer purchases. Rent, salaries and loan payments are fixed and stay put."
+			}
+		}
+	]
+}

@@ -1,0 +1,85 @@
+{
+	"_note": "ЧЕРНОВИК. Клиентская часть директора: условие и эталонный ответ (для запасного варианта). Рубрики (ключевые идеи) лежат ТОЛЬКО на прокси: proxy/rubrics.json. KZ ещё нет - Localizer откатывается на RU.",
+	"strings": {
+		"fallback_note": {
+			"ru": "Связь с директором нестабильна.",
+			"en": "The connection to the director is unstable."
+		},
+		"empty_verdict": {
+			"ru": "Вы ничего не ответили. Директор не знает, что вы предлагаете.",
+			"en": "You didn't answer. The director doesn't know what you propose."
+		},
+		"repeat_intro": {
+			"ru": "Мы уже сталкивались с похожим. Как поступим на этот раз?",
+			"en": "We've seen something like this before. What will you do this time?"
+		}
+	},
+	"problems": [
+		{
+			"id": "credit_1", "topic": "credit", "variant": 1,
+			"text": {
+				"ru": "Нам нужна новая печь за 3000, но денег нет. Банк предлагает кредит на год под 20%. Брать? На что вы бы смотрели?",
+				"en": "We need a new oven for 3000 but have no cash. The bank offers a one-year loan at 20%. Should we take it? What would you look at?"
+			},
+			"reference": {
+				"ru": "Посчитать полную стоимость: вернуть придётся 3600, переплата 600. Прикинуть, сколько дополнительной выручки даст печь за год и покроет ли она платёж. Сравнить с альтернативами (рассрочка, другая печь) и убедиться, что платить кредит мы сможем даже в слабый месяц.",
+				"en": "Work out the full cost: we repay 3600, 600 of it interest. Estimate how much extra revenue the oven brings in a year and whether it covers the payments. Compare alternatives (instalments, a cheaper oven) and make sure we can pay even in a weak month."
+			}
+		},
+		{
+			"id": "credit_2", "topic": "credit", "variant": 2,
+			"text": {
+				"ru": "Выручка просела, и платёж по кредиту через неделю нам не покрыть. Что делать?",
+				"en": "Sales dropped and we can't cover next week's loan payment. What do we do?"
+			},
+			"reference": {
+				"ru": "Не молчать и заранее обратиться в банк: попросить отсрочку или реструктуризацию. Срезать необязательные расходы и найти, где быстро добрать выручку. Не брать новый дорогой кредит, чтобы закрыть старый, и не допускать просрочки.",
+				"en": "Don't stay silent: contact the bank early and ask for a deferral or restructuring. Cut non-essential costs and find a quick way to lift revenue. Don't take a new expensive loan to pay the old one, and avoid a missed payment."
+			}
+		},
+		{
+			"id": "margin_1", "topic": "margin", "variant": 1,
+			"text": {
+				"ru": "Продукты подорожали, себестоимость пиццы выросла с 250 до 320, продаём по 400, а конкуренты цены не поднимают. Что сделаем?",
+				"en": "Ingredients got pricier: cost per pizza rose from 250 to 320, we sell at 400, and competitors are not raising prices. What do we do?"
+			},
+			"reference": {
+				"ru": "Пересчитать маржу: прибыль с пиццы упала со 150 до 80. Искать более дешёвого поставщика и снижать потери. Поднять цену умеренно или продавать комбо с более высокой маржой. Не экономить скрытно на качестве и размере порции.",
+				"en": "Recalculate the margin: profit per pizza fell from 150 to 80. Look for a cheaper supplier and cut waste. Raise the price moderately or sell combos with a higher margin. Don't quietly cut quality or portion size."
+			}
+		},
+		{
+			"id": "margin_2", "topic": "margin", "variant": 2,
+			"text": {
+				"ru": "«Маргариту» заказывают чаще всего, но она стоит 300 при себестоимости 280. Это хорошо?",
+				"en": "The Margherita is our most ordered pizza, but it sells for 300 and costs 280. Is that good?"
+			},
+			"reference": {
+				"ru": "Популярность не равна прибыли: маржа всего 20 из 300, это около 7%. Нужно либо поднять цену или снизить себестоимость, либо продвигать позиции с большей маржой, а Маргариту использовать как приманку.",
+				"en": "Popularity isn't profit: the margin is just 20 out of 300, about 7%. Raise the price or cut the cost, or push higher-margin items and use the Margherita as a hook."
+			}
+		},
+		{
+			"id": "income_expenses_1", "topic": "income_expenses", "variant": 1,
+			"text": {
+				"ru": "Выручка за месяц 10 000, а на счёте убыток. Как понять, куда уходят деньги?",
+				"en": "Monthly revenue is 10,000 yet the account shows a loss. How do we find out where the money goes?"
+			},
+			"reference": {
+				"ru": "Разложить расходы по статьям: постоянные (аренда, зарплаты) и переменные (продукты). Сравнить каждую статью с выручкой и найти самые крупные. Сократить то, что можно, и вести учёт регулярно, а не раз в год.",
+				"en": "Break expenses down by line: fixed (rent, salaries) and variable (ingredients). Compare each line with revenue and find the biggest ones. Trim what we can and keep records regularly, not once a year."
+			}
+		},
+		{
+			"id": "income_expenses_2", "topic": "income_expenses", "variant": 2,
+			"text": {
+				"ru": "Мы хотим открыть вторую точку. Что нужно посчитать до решения?",
+				"en": "We want to open a second location. What must we calculate before deciding?"
+			},
+			"reference": {
+				"ru": "Стартовые вложения и срок окупаемости. Постоянные расходы новой точки (аренда, зарплаты) и сколько заказов нужно, чтобы выйти в ноль. Запас денег на первые месяцы без прибыли и влияние на первую точку.",
+				"en": "Start-up investment and payback time. The new location's fixed costs (rent, salaries) and how many orders it needs to break even. A cash cushion for the first months without profit, and the effect on the first location."
+			}
+		}
+	]
+}
