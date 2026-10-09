@@ -1,0 +1,30 @@
+{
+	"credit": {
+		"principals": [2000, 2200, 2400],
+		"rate_percent": 20,
+		"forgive_shortfall_cycles": [1]
+	},
+	"rewards": {
+		"minigame_success": 200,
+		"quiz_correct": 400,
+		"quiz_wrong": -200
+	},
+	"credit_bonus": {
+		"partial_from_percent": 70,
+		"partial_bonus": 300,
+		"full_from_percent": 100,
+		"full_bonus": 600
+	},
+	"savings": {
+		"earned_share_percent": 25,
+		"minimum": 300
+	},
+	"director": {
+		"bonus_per_point": 100
+	},
+	"upgrades": {
+		"prices": [300, 800],
+		"reward_bonus_per_level": 100,
+		"time_bonus_per_level": 1.0
+	}
+}

@@ -1,0 +1,96 @@
+{
+ "_note": "Сгенерировано tools/gen_courier_layouts.py. Не править руками - перегенерировать.",
+ "layouts": [
+  {
+   "rows": 5,
+   "cols": 4,
+   "grid": [
+    "H2! L0 L0 L3",
+    "-3 -0 T3 L3",
+    "L3 L3 L1 -0",
+    "-2 -3 T2 L0",
+    "-2 P0! L1 -2"
+   ],
+   "path_len": 6,
+   "id": "courier_01"
+  },
+  {
+   "rows": 5,
+   "cols": 4,
+   "grid": [
+    "L2 -2 H3! T0",
+    "-1 -0 .0 L2",
+    "-1 L1 L1 -3",
+    "-1 L3 L3 -3",
+    "P0! -0 -3 T0"
+   ],
+   "path_len": 7,
+   "id": "courier_02"
+  },
+  {
+   "rows": 5,
+   "cols": 4,
+   "grid": [
+    "L1 L0 H3! -0",
+    "-1 -1 T0 L0",
+    "-3 L2 L3 T0",
+    ".1 L1 -3 T0",
+    "L2 .1 L1 P3!"
+   ],
+   "path_len": 8,
+   "id": "courier_03"
+  },
+  {
+   "rows": 5,
+   "cols": 4,
+   "grid": [
+    "L3 -0 L2 H3!",
+    "-3 .1 -1 -0",
+    "T2 T0 -1 -2",
+    "-2 L1 -3 T0",
+    "L2 L3 P0! L0"
+   ],
+   "path_len": 6,
+   "id": "courier_04"
+  },
+  {
+   "rows": 5,
+   "cols": 4,
+   "grid": [
+    "L3 -0 H3! L1",
+    "-3 .1 L3 L2",
+    "-3 .0 L1 -0",
+    "-3 L0 T0 L1",
+    "P0! -2 T0 .2"
+   ],
+   "path_len": 7,
+   "id": "courier_05"
+  },
+  {
+   "rows": 5,
+   "cols": 4,
+   "grid": [
+    ".0 -2 L3 H3!",
+    "L1 -3 L3 L3",
+    ".3 T1 L0 L2",
+    ".1 T2 -1 -0",
+    "L3 -1 P0! L3"
+   ],
+   "path_len": 8,
+   "id": "courier_06"
+  },
+  {
+   "rows": 5,
+   "cols": 4,
+   "grid": [
+    "-1 H2! T3 L2",
+    "L3 L1 .1 -0",
+    "L1 L0 L2 -0",
+    "L2 L2 -3 T3",
+    "L3 -2 P3! .1"
+   ],
+   "path_len": 10,
+   "id": "courier_07"
+  }
+ ]
+}

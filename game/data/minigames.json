@@ -1,0 +1,46 @@
+{
+	"_note": "ЧЕРНОВИК контента мини-игр. Один запуск мини-игры = один заказ / один сценарий / одна раскладка. Раскладки курьера - в courier_layouts.json (генерируются tools/gen_courier_layouts.py).",
+	"toppings": {
+		"items": {
+			"cheese": {"ru": "Сыр", "en": "Cheese"},
+			"pepperoni": {"ru": "Пепперони", "en": "Pepperoni"},
+			"mushroom": {"ru": "Грибы", "en": "Mushrooms"},
+			"olive": {"ru": "Оливки", "en": "Olives"},
+			"pepper": {"ru": "Перец", "en": "Pepper"},
+			"basil": {"ru": "Базилик", "en": "Basil"}
+		},
+		"orders": [
+			{"id": "t01", "items": ["cheese", "pepperoni"]},
+			{"id": "t02", "items": ["cheese", "mushroom", "olive"]},
+			{"id": "t03", "items": ["pepperoni", "pepperoni", "cheese"]},
+			{"id": "t04", "items": ["basil", "cheese", "olive"]},
+			{"id": "t05", "items": ["pepper", "mushroom"]},
+			{"id": "t06", "items": ["pepperoni", "pepper", "olive", "cheese"]},
+			{"id": "t07", "items": ["mushroom", "mushroom", "basil"]},
+			{"id": "t08", "items": ["cheese", "cheese", "pepperoni", "pepper"]},
+			{"id": "t09", "items": ["olive", "basil"]},
+			{"id": "t10", "items": ["pepper", "pepperoni", "mushroom"]}
+		]
+	},
+	"purchase": {
+		"budget": 100,
+		"step": 5,
+		"start": {"food": 20, "staff": 40, "marketing": 40},
+		"scenarios": [
+			{"id": "p01", "text": {"ru": "Обычная неделя: всё идёт как обычно.", "en": "A regular week: business as usual."},
+				"zones": {"food": [35, 45], "staff": [30, 40], "marketing": [15, 25]}},
+			{"id": "p02", "text": {"ru": "Скоро праздник, ждём толпу гостей.", "en": "A holiday is coming and a crowd is expected."},
+				"zones": {"food": [40, 50], "staff": [35, 45], "marketing": [10, 20]}},
+			{"id": "p03", "text": {"ru": "Рядом открылась новая точка - нужно о себе напомнить.", "en": "A new location opened nearby - time to get noticed."},
+				"zones": {"food": [30, 40], "staff": [30, 40], "marketing": [25, 35]}},
+			{"id": "p04", "text": {"ru": "Жара, заказов стало меньше.", "en": "A heatwave - orders are down."},
+				"zones": {"food": [30, 40], "staff": [25, 35], "marketing": [30, 40]}},
+			{"id": "p05", "text": {"ru": "Повар заболел, смены не закрыть.", "en": "The cook is sick and shifts are uncovered."},
+				"zones": {"food": [30, 40], "staff": [40, 50], "marketing": [10, 20]}},
+			{"id": "p06", "text": {"ru": "Конкурент снизил цены.", "en": "A competitor cut their prices."},
+				"zones": {"food": [35, 45], "staff": [20, 30], "marketing": [30, 40]}},
+			{"id": "p07", "text": {"ru": "Поставщик поднял цены на продукты.", "en": "The supplier raised ingredient prices."},
+				"zones": {"food": [45, 55], "staff": [30, 40], "marketing": [10, 20]}}
+		]
+	}
+}
