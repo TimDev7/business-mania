@@ -14,3 +14,10 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Собранные билды (большие файлы, лимит GitHub 100 МБ на файл)
+export/
+Export/
+*.exe
+*.pck
+*.zip
