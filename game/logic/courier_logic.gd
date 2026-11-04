@@ -22,14 +22,19 @@ var types: Array = []
 var rotations: Array = []
 var fixed: Array = []
 var taps: int = 0
+## Для фронтенда: правило игры {"ru": ..., "en": ...} и пути к картинкам плиток {тип: путь}.
+var rule: Variant = {}
+var tile_paths: Dictionary = {}
 
 var _bag: ShuffleBag
 var _layouts: Array
 
 
-func _init(layouts: Array, rng: RandomNumberGenerator) -> void:
+func _init(layouts: Array, rng: RandomNumberGenerator, courier_data: Dictionary = {}) -> void:
 	_layouts = layouts
 	_bag = ShuffleBag.new(layouts, rng)
+	rule = courier_data.get("rule", {})
+	tile_paths = courier_data.get("tiles", {})
 
 
 ## Берёт следующую раскладку (без повторов подряд). Возвращает её словарь.

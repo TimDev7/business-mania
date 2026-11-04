@@ -2,6 +2,13 @@
 
 [ext_resource type="Script" uid="uid://crfi40sgue0ya" path="res://template/ui/scenes/game_window.gd" id="1_yvo4i"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0h0c7"]
+bg_color = Color(0.112431936, 0.11243195, 0.112431936, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
 [sub_resource type="Animation" id="Animation_yvo4i"]
 length = 0.001
 tracks/0/type = "value"
@@ -201,6 +208,7 @@ theme_override_constants/margin_bottom = 48
 
 [node name="PanelContainer" type="PanelContainer" parent="Control/MarginContainer" unique_id=321713740]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0h0c7")
 
 [node name="DefaultAnimationPlayer" type="AnimationPlayer" parent="." unique_id=395366019]
 libraries/ = SubResource("AnimationLibrary_w8t5j")

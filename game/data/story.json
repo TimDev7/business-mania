@@ -1,0 +1,102 @@
+{
+	"_note": "Сюжет и обучалка, RU / KK / EN. Страница = {speaker, text}. speaker: narrator (без портрета) или mentor. Нет перевода -> RU -> EN. Казахский - ЧЕРНОВИК, нужна вычитка носителем.",
+	"speakers": {
+		"narrator": {
+			"name": {"ru": "AlmaU Internity", "kk": "AlmaU Internity", "en": "AlmaU Internity"}
+		},
+		"mentor": {
+			"name": {"ru": "Арман, куратор", "kk": "Арман, тәлімгер", "en": "Arman, mentor"},
+			"portrait": "res://assets/textures/brand/mentor.svg"
+		}
+	},
+	"intro": [
+		{"speaker": "narrator", "text": {
+			"ru": "Добро пожаловать в Internity (Internship Infinity): игру-стажировку в честь AlmaU и Tatishev Foundation. Здесь учатся вести бизнес на практике. Тебя взяли в программу!",
+			"kk": "Internity (Internship Infinity) ойынына қош келдің: AlmaU мен Tatishev Foundation құрметіне арналған тағылымдама ойыны. Мұнда бизнесті тәжірибеде үйренеді. Сені бағдарламаға қабылдады!",
+			"en": "Welcome to Internity (Internship Infinity): an internship game made in honour of AlmaU and Tatishev Foundation. Here you learn to run a business hands-on. You are in!"}},
+		{"speaker": "narrator", "text": {
+			"ru": "Твоё первое место - пиццерия «Фета». Ты стажёр бизнес-ассистента: следишь за деньгами, принимаешь решения и помогаешь на кухне.",
+			"kk": "Бірінші орның – «Фета» пиццериясы. Сен бизнес-көмекшінің тағылымдамашысысың: ақшаны қадағалайсың, шешім қабылдайсың және асүйде көмектесесің.",
+			"en": "Your first placement is the pizzeria «Feta». You are a business assistant intern: you watch the money, make decisions and help in the kitchen."}},
+		{"speaker": "narrator", "text": {
+			"ru": "В пиццерии своя валюта - феты. Пиццерия взяла кредит на развитие, и заработанными фетами его нужно вернуть.",
+			"kk": "Пиццерияның өз валютасы бар – феттер. Пиццерия дамуға несие алды, оны тапқан феттермен қайтару керек.",
+			"en": "The pizzeria has its own currency - fets. It took a loan to grow, and it has to be repaid in fets."}},
+		{"speaker": "mentor", "text": {
+			"ru": "Привет! Я Арман, твой куратор. Я отвечаю за твою стажировку и буду рядом, пока ты осваиваешься.",
+			"kk": "Сәлем! Мен Арманмын, сенің тәлімгеріңмін. Тағылымдамаң үшін мен жауаптымын және үйреніп жатқанда қасыңда боламын.",
+			"en": "Hi! I'm Arman, your mentor. I'm responsible for your internship and I'll be around while you settle in."}},
+		{"speaker": "mentor", "text": {
+			"ru": "Одна смена здесь - один день. На него у тебя 90 секунд: быстрые задания (собрать пиццу, разложить бюджет, проложить дорогу курьеру) и вопросы по бизнесу между ними.",
+			"kk": "Мұнда бір ауысым – бір күн. Оған саған 90 секунд беріледі: жылдам тапсырмалар (пицца жинау, бюджетті бөлу, курьерге жол салу) және олардың арасында бизнес туралы сұрақтар.",
+			"en": "One shift here is one day. You get 90 seconds for it: quick tasks (build a pizza, split a budget, route a courier) with business questions in between."}},
+		{"speaker": "mentor", "text": {
+			"ru": "За задания и верные ответы ты зарабатываешь феты. Набери сумму, чтобы вернуть кредит дня: 70% уже хорошо, а 100% закроет кредит.",
+			"kk": "Тапсырмалар мен дұрыс жауаптар үшін феттер табасың. Күннің несиесін қайтару үшін жеткілікті сома жина: 70% – жақсы, ал 100% несиені жабады.",
+			"en": "Tasks and correct answers earn you fets. Collect enough to repay the day's loan: 70% is good, and 100% closes the loan."}},
+		{"speaker": "mentor", "text": {
+			"ru": "После дня я дам тебе бизнес-кейс. Ответь своими словами, как поступил бы ты. Я оценю ответ и подскажу, как сделать лучше.",
+			"kk": "Күннен кейін мен саған бизнес-кейс беремін. Өз сөзіңмен жауап бер: өзің қалай әрекет етер едің. Мен жауапты бағалап, қалай жақсартуға болатынын айтамын.",
+			"en": "After the day I'll give you a business case. Answer in your own words. I'll score it and tell you how to do better."}},
+		{"speaker": "mentor", "text": {
+			"ru": "Часть фетов уходит в копилку. Трать её на улучшение станций: тогда задания приносят больше фетов и дают больше времени.",
+			"kk": "Феттердің бір бөлігі жинаққа түседі. Оны стансаларды жақсартуға жұмса: сонда тапсырмалар көбірек фет әкеледі және уақыт көбірек береді.",
+			"en": "Part of your fets goes to savings. Spend it on upgrading stations: tasks then pay more and give you more time."}},
+		{"speaker": "mentor", "text": {
+			"ru": "Первый день учебный: если не хватит фетов, я прощу недобор. Готов? Тогда начинаем!",
+			"kk": "Бірінші күн оқу күні: феттер жетпесе, жетіспегенін кешіремін. Дайынсың ба? Онда бастаймыз!",
+			"en": "The first day is training: if you fall short, I'll forgive the shortfall. Ready? Let's begin!"}}
+	],
+	"tutorial": {
+		"toppings": [
+			{"speaker": "mentor", "text": {
+				"ru": "Топпинги. Наверху написан заказ. Перетащи нужные топпинги из лотка на пиццу.",
+				"kk": "Топпингтер. Жоғарыда тапсырыс жазылған. Қажетті топпингтерді науадан пиццаға сүйреп апар.",
+				"en": "Toppings. The order is written at the top. Drag the right toppings from the tray onto the pizza."}},
+			{"speaker": "mentor", "text": {
+				"ru": "Лишний или не тот топпинг - и пицца выбрасывается, а заказ собирается заново. Будь внимателен!",
+				"kk": "Артық немесе басқа топпинг қойсаң, пицца тасталады да, тапсырыс қайтадан жиналады. Мұқият бол!",
+				"en": "A wrong or extra topping and the pizza is binned, so the order starts over. Be careful!"}}
+		],
+		"purchase": [
+			{"speaker": "mentor", "text": {
+				"ru": "Закупка. Раздели бюджет между продуктами, сотрудниками и маркетингом под ситуацию.",
+				"kk": "Сатып алу. Бюджетті өнімдер, қызметкерлер және маркетинг арасында жағдайға сай бөл.",
+				"en": "Purchasing. Split the budget between ingredients, staff and marketing to fit the situation."}},
+			{"speaker": "mentor", "text": {
+				"ru": "Двигай ползунки так, чтобы каждый попал в зелёную зону. Когда все три там, отпусти палец.",
+				"kk": "Жүгіргілерді әрқайсысы өз жасыл аймағына түсетіндей жылжыт. Үшеуі де сонда болғанда, саусағыңды жібер.",
+				"en": "Move the sliders so each one lands in its green zone. When all three are there, let go."}}
+		],
+		"courier": [
+			{"speaker": "mentor", "text": {
+				"ru": "Курьер. Нажимай на плитки, чтобы повернуть дорогу.",
+				"kk": "Курьер. Жолды бұру үшін тақтайшаларға бас.",
+				"en": "Courier. Tap tiles to rotate the road."}},
+			{"speaker": "mentor", "text": {
+				"ru": "Проложи путь от пиццерии до дома. Клетки, до которых дорога уже дошла, загораются зелёным.",
+				"kk": "Пиццериядан үйге дейін жол сал. Жол жеткен тақтайшалар жасыл болып жанады.",
+				"en": "Build a path from the pizzeria to the house. Tiles the road already reaches light up green."}}
+		],
+		"quiz": [
+			{"speaker": "mentor", "text": {
+				"ru": "Вопрос по бизнесу. Выбери один из четырёх ответов, пока не вышло время.",
+				"kk": "Бизнес туралы сұрақ. Уақыт бітпей тұрып төрт жауаптың бірін таңда.",
+				"en": "A business question. Pick one of four answers before time runs out."}},
+			{"speaker": "mentor", "text": {
+				"ru": "Верный ответ приносит феты, а неверный отнимает. Подумай головой!",
+				"kk": "Дұрыс жауап феттер әкеледі, ал дұрыс емес – алып кетеді. Ойланып жауап бер!",
+				"en": "A correct answer earns fets, a wrong one costs you. Think it through!"}}
+		],
+		"case": [
+			{"speaker": "mentor", "text": {
+				"ru": "А теперь бизнес-кейс. Напиши своими словами, как бы ты поступил: можно не торопиться, до 150 символов.",
+				"kk": "Енді бизнес-кейс. Өз сөзіңмен жаз: өзің қалай әрекет етер едің. Асықпа, 150 таңбаға дейін.",
+				"en": "Now a business case. Write how you would act, in your own words: take your time, up to 150 characters."}},
+			{"speaker": "mentor", "text": {
+				"ru": "Личные данные не вводи. Я оценю ответ от 0 до 3 и подскажу, что можно усилить.",
+				"kk": "Жеке деректерді енгізбе. Мен жауапты 0-ден 3-ке дейін бағалап, нені күшейтуге болатынын айтамын.",
+				"en": "Don't enter personal data. I'll score your answer from 0 to 3 and tell you what to strengthen."}}
+		]
+	}
+}

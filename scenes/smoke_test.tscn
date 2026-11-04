@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c0fx6x74ksa6w"]
+
+[ext_resource type="Script" uid="uid://cyylx75fjuyv1" path="res://scenes/smoke_test.gd" id="1_tfksg"]
+[ext_resource type="Script" uid="uid://dixdxu5ntrdec" path="res://game/logic/director_client.gd" id="1_uages"]
+
+[node name="SmokeTest" type="Node" unique_id=952173897]
+script = ExtResource("1_tfksg")
+
+[node name="DirectorClient" type="Node" parent="." unique_id=1014226113]
+script = ExtResource("1_uages")

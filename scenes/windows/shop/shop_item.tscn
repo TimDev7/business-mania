@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://bwodvsfhq8m3j"]
+
+[ext_resource type="Script" uid="uid://rbs246163x50" path="res://scenes/windows/shop/shop_item.gd" id="1_1a06h"]
+[ext_resource type="PackedScene" uid="uid://cxlr8nmotfbdk" path="res://template/ui/components/juicy_button_component.tscn" id="1_usmvi"]
+
+[node name="ShopItem" type="Button" unique_id=622688717]
+custom_minimum_size = Vector2(0, 110)
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 8.0
+grow_horizontal = 2
+size_flags_vertical = 0
+script = ExtResource("1_1a06h")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2101042606]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1445154136]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 16
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=2091940166]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1359567791]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="NameLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=341923504]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+
+[node name="LevelLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1881756947]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 3
+
+[node name="PriceLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer" unique_id=722532523]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 0.6627451, 1)
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+text = "50"
+
+[node name="JuicyButtonComponent" parent="." unique_id=437082904 instance=ExtResource("1_usmvi")]

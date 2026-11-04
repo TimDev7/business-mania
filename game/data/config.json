@@ -2,22 +2,23 @@
 	"version": 1,
 	"default_language": "ru",
 	"languages": ["ru", "kk", "en"],
-	"cycle_count": 3,
+	"cycle_count": 2,
 	"minigames": ["toppings", "purchase", "courier"],
 	"timing": {
 		"cycle_seconds": 90.0,
 		"hint_seconds": 1.0,
 		"minigame_seconds": 8.0,
-		"quiz_seconds": 10.0
+		"quiz_seconds": 25.0
 	},
 	"director": {
-		"input_seconds": 60.0,
+		"input_seconds": 0.0,
 		"max_chars": 150,
-		"request_timeout_seconds": 8.0,
+		"request_timeout_seconds": 12.0,
 		"mistakes_in_request": 5,
 		"mistakes_explained": 3,
 		"neutral_score": 1,
-		"proxy_url": ""
+		"proxy_url": "https://businessmania-proxy.businessmania.workers.dev",
+		"show_error_code": false
 	},
 	"final_screen": {
 		"top_mistakes": 3,

@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://ua1eqqd7o4vx"]
+
+[ext_resource type="Script" uid="uid://duinllasgveb7" path="res://scenes/minigames/courier/courier_minigame.gd" id="1_33a1p"]
+[ext_resource type="PackedScene" uid="uid://dwnroe41p3f0c" path="res://scenes/minigames/courier/courier_tile.tscn" id="1_shkdb"]
+
+[node name="CourierMinigame" type="Control" unique_id=471424697]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_33a1p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1174774199]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RuleLabel" type="Label" parent="VBoxContainer" unique_id=2086572601]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 90)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+autowrap_mode = 3
+
+[node name="Grid" type="GridContainer" parent="VBoxContainer" unique_id=466314428]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
+columns = 5
+
+[node name="CourierTile" parent="VBoxContainer/Grid" unique_id=654708421 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile2" parent="VBoxContainer/Grid" unique_id=1860487370 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile3" parent="VBoxContainer/Grid" unique_id=41612765 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile4" parent="VBoxContainer/Grid" unique_id=525373428 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile5" parent="VBoxContainer/Grid" unique_id=474058060 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile6" parent="VBoxContainer/Grid" unique_id=401909032 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile7" parent="VBoxContainer/Grid" unique_id=1599625596 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile8" parent="VBoxContainer/Grid" unique_id=969464210 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile9" parent="VBoxContainer/Grid" unique_id=606631596 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile10" parent="VBoxContainer/Grid" unique_id=1344383292 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile11" parent="VBoxContainer/Grid" unique_id=2101618721 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile12" parent="VBoxContainer/Grid" unique_id=789109619 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile13" parent="VBoxContainer/Grid" unique_id=929168235 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile14" parent="VBoxContainer/Grid" unique_id=2032978424 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile15" parent="VBoxContainer/Grid" unique_id=543077982 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile16" parent="VBoxContainer/Grid" unique_id=1862900776 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile17" parent="VBoxContainer/Grid" unique_id=2066011692 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile18" parent="VBoxContainer/Grid" unique_id=1469809659 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile19" parent="VBoxContainer/Grid" unique_id=1145476000 instance=ExtResource("1_shkdb")]
+layout_mode = 2
+
+[node name="CourierTile20" parent="VBoxContainer/Grid" unique_id=1341094421 instance=ExtResource("1_shkdb")]
+layout_mode = 2

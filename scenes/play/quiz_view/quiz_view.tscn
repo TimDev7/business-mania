@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://t6skbvmli7a0"]
+
+[ext_resource type="Theme" uid="uid://cdb4r0lu8otrm" path="res://assets/themes/main.tres" id="1_ydffq"]
+[ext_resource type="Script" uid="uid://dkrx2mmruq1ji" path="res://scenes/play/quiz_view/quiz_view.gd" id="2_r35x2"]
+[ext_resource type="PackedScene" uid="uid://574ms2tu1cn1" path="res://scenes/ui/buttons/button.tscn" id="3_70jnb"]
+
+[node name="QuizView" type="VBoxContainer" unique_id=99504734]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ydffq")
+theme_override_constants/separation = 48
+alignment = 1
+script = ExtResource("2_r35x2")
+
+[node name="QuestionLabel" type="Label" parent="." unique_id=696254040]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Question #1
+We have 5 apples. Someone stole 3 apples. How much apples are we have now?"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Options" type="VBoxContainer" parent="." unique_id=1976874980]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 16
+
+[node name="Option1" parent="Options" unique_id=1512778130 instance=ExtResource("3_70jnb")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "1254"
+
+[node name="Option2" parent="Options" unique_id=330419293 instance=ExtResource("3_70jnb")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "2"
+
+[node name="Option3" parent="Options" unique_id=1070643111 instance=ExtResource("3_70jnb")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "1"
+
+[node name="Option4" parent="Options" unique_id=2141083173 instance=ExtResource("3_70jnb")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "5"

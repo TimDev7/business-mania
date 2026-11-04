@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://cq74gr64ngc5y"]
+
+[ext_resource type="PackedScene" uid="uid://dbxuyb5djs8as" path="res://template/ui/scenes/game_window.tscn" id="1_tt4gb"]
+[ext_resource type="Script" uid="uid://coggs0jr5nj6d" path="res://scenes/windows/director/director_window.gd" id="2_y4mof"]
+[ext_resource type="PackedScene" uid="uid://574ms2tu1cn1" path="res://scenes/ui/buttons/button.tscn" id="3_vjpx8"]
+
+[node name="DirectorWindow" unique_id=656352947 instance=ExtResource("1_tt4gb")]
+script = ExtResource("2_y4mof")
+
+[node name="ColorRect" type="ColorRect" parent="BackButton" parent_id_path=PackedInt32Array(2070245851) index="0" unique_id=1101749446]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.49803922)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/MarginContainer/PanelContainer" parent_id_path=PackedInt32Array(321713740) index="0" unique_id=1344696442]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/PanelContainer/ScrollContainer" index="0" unique_id=37730289]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer" index="0" unique_id=1444350153]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Куратор"
+metadata/tr_key = "mentor_title"
+horizontal_alignment = 1
+
+[node name="PortraitRect" type="TextureRect" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer" index="1" unique_id=1977783917]
+unique_name_in_owner = true
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ProblemLabel" type="Label" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer" index="2" unique_id=1926563812]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="InputPanel" type="VBoxContainer" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer" index="3" unique_id=846891244]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="AnswerEdit" type="TextEdit" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/InputPanel" index="0" unique_id=575785389]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+placeholder_text = "Что ты сделаешь?"
+wrap_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/InputPanel" index="1" unique_id=1862595236]
+layout_mode = 2
+
+[node name="CharsLabel" type="Label" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/InputPanel/HBoxContainer" index="0" unique_id=863853434]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TimerLabel" type="Label" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/InputPanel/HBoxContainer" index="1" unique_id=631487146]
+unique_name_in_owner = true
+layout_mode = 2
+horizontal_alignment = 2
+
+[node name="Label" type="Label" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/InputPanel" index="2" unique_id=352507240]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.5927982, 0.53257173, 1)
+text = "Не вводи личные данные!"
+metadata/tr_key = "privacy_warning"
+horizontal_alignment = 1
+
+[node name="SubmitButton" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/InputPanel" index="3" unique_id=330419293 instance=ExtResource("3_vjpx8")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Ответить"
+metadata/tr_key = "btn_submit"
+
+[node name="ThinkingLabel" type="RichTextLabel" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer" index="4" unique_id=1014350217]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[wave]Куратор думает[/wave] "
+metadata/tr_key = "mentor_thinking"
+horizontal_alignment = 1
+
+[node name="ResultPanel" type="VBoxContainer" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer" index="5" unique_id=310637064]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="ScoreLabel" type="RichTextLabel" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/ResultPanel" index="0" unique_id=771130170]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 3
+
+[node name="VerdictLabel" type="Label" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/ResultPanel" index="1" unique_id=122023479]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="MissingLabel" type="Label" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/ResultPanel" index="2" unique_id=192277065]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="BetterLabel" type="Label" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/ResultPanel" index="3" unique_id=423420455]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="NoteLabel" type="Label" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/ResultPanel" index="4" unique_id=272653267]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="BonusLabel" type="RichTextLabel" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/ResultPanel" index="5" unique_id=488260681]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 3
+
+[node name="ContinueButton" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/ResultPanel" index="6" unique_id=1180005033 instance=ExtResource("3_vjpx8")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Далее"

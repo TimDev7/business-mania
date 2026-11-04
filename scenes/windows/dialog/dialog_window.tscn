@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://bpbpc2nxotdm8"]
+
+[ext_resource type="PackedScene" uid="uid://dbxuyb5djs8as" path="res://template/ui/scenes/game_window.tscn" id="1_kes0x"]
+[ext_resource type="Script" uid="uid://c8rl8bg1cf1as" path="res://scenes/windows/dialog/dialog_window.gd" id="2_o3ok1"]
+[ext_resource type="PackedScene" uid="uid://574ms2tu1cn1" path="res://scenes/ui/buttons/button.tscn" id="3_13ova"]
+
+[node name="DialogWindow" unique_id=656352947 instance=ExtResource("1_kes0x")]
+script = ExtResource("2_o3ok1")
+
+[node name="ColorRect" type="ColorRect" parent="BackButton" parent_id_path=PackedInt32Array(2070245851) index="0" unique_id=392041286]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.49803922)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/PanelContainer" parent_id_path=PackedInt32Array(321713740) index="0" unique_id=1177435527]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/PanelContainer/VBoxContainer" index="0" unique_id=1518454056]
+layout_mode = 2
+
+[node name="PortraitRect" type="TextureRect" parent="Control/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="0" unique_id=1404232500]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer" index="1" unique_id=938102925]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpeakerLabel" type="Label" parent="Control/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="0" unique_id=73983235]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7254902, 0.7490196, 0.9843137, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+
+[node name="TextLabel" type="Label" parent="Control/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="1" unique_id=1385639467]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+autowrap_mode = 3
+
+[node name="PageLabel" type="RichTextLabel" parent="Control/MarginContainer/PanelContainer/VBoxContainer" index="1" unique_id=1740798053]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/MarginContainer/PanelContainer/VBoxContainer" index="2" unique_id=425180559]
+layout_mode = 2
+
+[node name="SkipButton" parent="Control/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" index="0" unique_id=330419293 instance=ExtResource("3_13ova")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="NextButton" parent="Control/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2" index="1" unique_id=1284728417 instance=ExtResource("3_13ova")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3

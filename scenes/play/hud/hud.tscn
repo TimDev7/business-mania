@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://ce45516mhan4t"]
+
+[ext_resource type="Script" uid="uid://mrh80j7qtkt3" path="res://scenes/play/hud/hud.gd" id="1_6ie1d"]
+[ext_resource type="PackedScene" uid="uid://cyh2y5xqsy7is" path="res://template/ui/scenes/juicy_progress_bar.tscn" id="2_6ie1d"]
+
+[node name="Hud" type="VBoxContainer" unique_id=1312715434]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6ie1d")
+
+[node name="CycleLabel" type="RichTextLabel" parent="." unique_id=1906458061]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="TimeBar" parent="." unique_id=1892883523 instance=ExtResource("2_6ie1d")]
+unique_name_in_owner = true
+layout_mode = 2
+value_change_trans = 1
+text_value_visible = true
+
+[node name="TimeLabel" type="Label" parent="TimeBar" unique_id=1345443457]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 36
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=512409986]
+layout_mode = 2
+
+[node name="EarnedLabel" type="RichTextLabel" parent="HBoxContainer" unique_id=415218570]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="DeltaLabel" type="Label" parent="HBoxContainer" unique_id=1052581401]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 26
+horizontal_alignment = 2
+
+[node name="EarnedBar" parent="." unique_id=507243335 instance=ExtResource("2_6ie1d")]
+unique_name_in_owner = true
+layout_mode = 2
+text_value_visible = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EarnedBar" unique_id=822227398]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="EarnedBar/HBoxContainer" unique_id=1125255676]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.7
+
+[node name="ColorRect" type="ColorRect" parent="EarnedBar/HBoxContainer" unique_id=1319979897]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="EarnedBar/HBoxContainer" unique_id=28153515]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+
+[node name="StepBar" parent="." unique_id=680063250 instance=ExtResource("2_6ie1d")]
+unique_name_in_owner = true
+layout_mode = 2
+value_change_trans = 0
+text_value_visible = true

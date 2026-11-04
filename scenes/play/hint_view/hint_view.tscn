@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c8noht42thilx"]
+
+[ext_resource type="Script" uid="uid://lrql7ctv6fng" path="res://scenes/play/hint_view/hint_view.gd" id="1_06sam"]
+
+[node name="HintView" type="VBoxContainer" unique_id=1489355318]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("1_06sam")
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1132319434]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Топпинги"
+horizontal_alignment = 1
+
+[node name="TextLabel" type="Label" parent="." unique_id=2012530773]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Собери пиццу по заказу!"
+horizontal_alignment = 1
+autowrap_mode = 3

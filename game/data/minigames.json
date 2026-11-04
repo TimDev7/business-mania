@@ -1,13 +1,39 @@
 {
-	"_note": "ЧЕРНОВИК контента мини-игр. Один запуск мини-игры = один заказ / один сценарий / одна раскладка. Раскладки курьера - в courier_layouts.json (генерируются tools/gen_courier_layouts.py).",
+	"_note": "Контент мини-игр, RU / KK / EN (казахский - ЧЕРНОВИК, нужна вычитка носителем). Один запуск мини-игры = один заказ / один сценарий / одна раскладка. Раскладки курьера - в courier_layouts.json (генерируются tools/gen_courier_layouts.py).",
+	"courier": {
+		"rule": {
+			"ru": "Поворачивай плитки нажатием: дорога должна дойти от пиццерии до дома.",
+			"kk": "Тақтайшаларды басып бұр: жол пиццериядан үйге дейін жетуі керек.",
+			"en": "Tap tiles to turn them: the road must run from the pizzeria to the house."
+		},
+		"tiles": {
+			"-": "res://assets/textures/courier/road_straight.svg",
+			"L": "res://assets/textures/courier/road_corner.svg",
+			"T": "res://assets/textures/courier/road_t.svg",
+			"+": "res://assets/textures/courier/road_cross.svg",
+			"P": "res://assets/textures/courier/pizzeria.svg",
+			"H": "res://assets/textures/courier/house.svg",
+			".": "res://assets/textures/courier/empty.svg"
+		}
+	},
+	"titles": {
+		"toppings": {"ru": "Топпинги", "kk": "Топпингтер", "en": "Toppings"},
+		"purchase": {"ru": "Закупка", "kk": "Сатып алу", "en": "Purchase"},
+		"courier": {"ru": "Курьер", "kk": "Курьер", "en": "Courier"}
+	},
+	"hints": {
+		"toppings": {"ru": "Собери пиццу по заказу!", "kk": "Пиццаны тапсырыс бойынша жина!", "en": "Make the pizza to order!"},
+		"purchase": {"ru": "Распредели бюджет!", "kk": "Бюджетті бөл!", "en": "Split the budget!"},
+		"courier": {"ru": "Проложи дорогу курьеру!", "kk": "Курьерге жол сал!", "en": "Build the courier's route!"}
+	},
 	"toppings": {
 		"items": {
-			"cheese": {"ru": "Сыр", "en": "Cheese"},
-			"pepperoni": {"ru": "Пепперони", "en": "Pepperoni"},
-			"mushroom": {"ru": "Грибы", "en": "Mushrooms"},
-			"olive": {"ru": "Оливки", "en": "Olives"},
-			"pepper": {"ru": "Перец", "en": "Pepper"},
-			"basil": {"ru": "Базилик", "en": "Basil"}
+			"cheese": {"ru": "Сыр", "kk": "Ірімшік", "en": "Cheese", "icon": "res://assets/textures/toppings/cheese.svg"},
+			"pepperoni": {"ru": "Пепперони", "kk": "Пепперони", "en": "Pepperoni", "icon": "res://assets/textures/toppings/pepperoni.svg"},
+			"mushroom": {"ru": "Грибы", "kk": "Саңырауқұлақ", "en": "Mushrooms", "icon": "res://assets/textures/toppings/mushroom.svg"},
+			"olive": {"ru": "Оливки", "kk": "Зәйтүн", "en": "Olives", "icon": "res://assets/textures/toppings/olive.svg"},
+			"pepper": {"ru": "Перец", "kk": "Бұрыш", "en": "Pepper", "icon": "res://assets/textures/toppings/pepper.svg"},
+			"basil": {"ru": "Базилик", "kk": "Райхан", "en": "Basil", "icon": "res://assets/textures/toppings/basil.svg"}
 		},
 		"orders": [
 			{"id": "t01", "items": ["cheese", "pepperoni"]},
@@ -23,23 +49,33 @@
 		]
 	},
 	"purchase": {
+		"rule": {
+			"ru": "Раздели бюджет: попади каждой статьёй в зелёную зону.",
+			"kk": "Бюджетті бөл: әр бапты өз жасыл аймағына түсір.",
+			"en": "Split the budget: put every item in its green zone."
+		},
+		"labels": {
+			"food": {"ru": "Продукты", "kk": "Өнімдер", "en": "Ingredients"},
+			"staff": {"ru": "Сотрудники", "kk": "Қызметкерлер", "en": "Staff"},
+			"marketing": {"ru": "Маркетинг", "kk": "Маркетинг", "en": "Marketing"}
+		},
 		"budget": 100,
 		"step": 5,
 		"start": {"food": 20, "staff": 40, "marketing": 40},
 		"scenarios": [
-			{"id": "p01", "text": {"ru": "Обычная неделя: всё идёт как обычно.", "en": "A regular week: business as usual."},
+			{"id": "p01", "text": {"ru": "Обычная неделя: всё идёт своим чередом.", "kk": "Қарапайым апта: бәрі өз жөнімен жүріп жатыр.", "en": "A regular week: business as usual."},
 				"zones": {"food": [35, 45], "staff": [30, 40], "marketing": [15, 25]}},
-			{"id": "p02", "text": {"ru": "Скоро праздник, ждём толпу гостей.", "en": "A holiday is coming and a crowd is expected."},
+			{"id": "p02", "text": {"ru": "Скоро праздник, ждём толпу гостей.", "kk": "Мереке жақын, қонақтар көп күтіледі.", "en": "A holiday is coming and a crowd is expected."},
 				"zones": {"food": [40, 50], "staff": [35, 45], "marketing": [10, 20]}},
-			{"id": "p03", "text": {"ru": "Рядом открылась новая точка - нужно о себе напомнить.", "en": "A new location opened nearby - time to get noticed."},
+			{"id": "p03", "text": {"ru": "Рядом открылась новая точка - нужно о себе напомнить.", "kk": "Жақын жерде жаңа нүкте ашылды – өзімізді еске салу керек.", "en": "A new location opened nearby - time to get noticed."},
 				"zones": {"food": [30, 40], "staff": [30, 40], "marketing": [25, 35]}},
-			{"id": "p04", "text": {"ru": "Жара, заказов стало меньше.", "en": "A heatwave - orders are down."},
+			{"id": "p04", "text": {"ru": "Жара, заказов стало меньше.", "kk": "Аптап ыстық, тапсырыстар азайды.", "en": "A heatwave - orders are down."},
 				"zones": {"food": [30, 40], "staff": [25, 35], "marketing": [30, 40]}},
-			{"id": "p05", "text": {"ru": "Повар заболел, смены не закрыть.", "en": "The cook is sick and shifts are uncovered."},
+			{"id": "p05", "text": {"ru": "Повар заболел, смены не закрыть.", "kk": "Аспаз ауырып қалды, ауысымдарды жаба алмаймыз.", "en": "The cook is sick and shifts are uncovered."},
 				"zones": {"food": [30, 40], "staff": [40, 50], "marketing": [10, 20]}},
-			{"id": "p06", "text": {"ru": "Конкурент снизил цены.", "en": "A competitor cut their prices."},
+			{"id": "p06", "text": {"ru": "Конкурент снизил цены.", "kk": "Бәсекелес бағаны төмендетті.", "en": "A competitor cut their prices."},
 				"zones": {"food": [35, 45], "staff": [20, 30], "marketing": [30, 40]}},
-			{"id": "p07", "text": {"ru": "Поставщик поднял цены на продукты.", "en": "The supplier raised ingredient prices."},
+			{"id": "p07", "text": {"ru": "Поставщик поднял цены на продукты.", "kk": "Жеткізуші өнімдердің бағасын көтерді.", "en": "The supplier raised ingredient prices."},
 				"zones": {"food": [45, 55], "staff": [30, 40], "marketing": [10, 20]}}
 		]
 	}

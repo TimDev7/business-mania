@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://byopq3vad0ivn"]
+
+[ext_resource type="PackedScene" uid="uid://dbxuyb5djs8as" path="res://template/ui/scenes/game_window.tscn" id="1_eomy3"]
+[ext_resource type="Script" uid="uid://cdq0cih8h0d2b" path="res://scenes/windows/coming_soon/coming_soon_window.gd" id="2_34oyh"]
+
+[node name="ComingSoonWindow" unique_id=656352947 instance=ExtResource("1_eomy3")]
+script = ExtResource("2_34oyh")
+
+[node name="ColorRect" type="ColorRect" parent="BackButton" parent_id_path=PackedInt32Array(2070245851) index="0" unique_id=407930410]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.49803922)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/PanelContainer" parent_id_path=PackedInt32Array(321713740) index="0" unique_id=1099697878]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/MarginContainer/PanelContainer/VBoxContainer" index="0" unique_id=1671994979]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Скоро"
+metadata/tr_key = "coming_soon_title"
+horizontal_alignment = 1
+
+[node name="TextLabel" type="Label" parent="Control/MarginContainer/PanelContainer/VBoxContainer" index="1" unique_id=1184402537]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+horizontal_alignment = 1
+autowrap_mode = 3

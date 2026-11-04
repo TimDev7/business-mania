@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://dkmo7awh73fu5"]
+
+[ext_resource type="Script" uid="uid://66nsafcyl1ww" path="res://scenes/play/play.gd" id="1_fe62l"]
+[ext_resource type="Script" uid="uid://dixdxu5ntrdec" path="res://game/logic/director_client.gd" id="1_u5o7e"]
+[ext_resource type="PackedScene" uid="uid://dbp3o6p3q554v" path="res://scenes/minigames/stub/stub_minigame.tscn" id="2_4dfl3"]
+[ext_resource type="PackedScene" uid="uid://0n1ampmdwof1" path="res://scenes/minigames/toppings/toppings_minigame.tscn" id="2_gcg6u"]
+[ext_resource type="PackedScene" uid="uid://ce45516mhan4t" path="res://scenes/play/hud/hud.tscn" id="2_tdyfg"]
+[ext_resource type="PackedScene" uid="uid://c8noht42thilx" path="res://scenes/play/hint_view/hint_view.tscn" id="3_1phcp"]
+[ext_resource type="PackedScene" uid="uid://blydi6ovfxvj5" path="res://scenes/minigames/purchase/purchase_minigame.tscn" id="3_mric1"]
+[ext_resource type="PackedScene" uid="uid://t6skbvmli7a0" path="res://scenes/play/quiz_view/quiz_view.tscn" id="4_damvd"]
+[ext_resource type="PackedScene" uid="uid://ua1eqqd7o4vx" path="res://scenes/minigames/courier/courier_minigame.tscn" id="4_q6imw"]
+[ext_resource type="PackedScene" uid="uid://t4n1fpipngh0" path="res://scenes/windows/cycle_result/cycle_result_window.tscn" id="5_fe62l"]
+[ext_resource type="Script" uid="uid://bkw718wkspjqq" path="res://scenes/windows/windows_manager.gd" id="7_10igl"]
+[ext_resource type="PackedScene" uid="uid://cq74gr64ngc5y" path="res://scenes/windows/director/director_window.tscn" id="9_bjecb"]
+[ext_resource type="PackedScene" uid="uid://cpesi0x4y5s3e" path="res://scenes/windows/shop/shop_window.tscn" id="10_gcg6u"]
+[ext_resource type="PackedScene" uid="uid://574ms2tu1cn1" path="res://scenes/ui/buttons/button.tscn" id="10_mfrq5"]
+[ext_resource type="Script" uid="uid://8eufbk7n37sv" path="res://scenes/ui/sound_toggle.gd" id="11_blg3p"]
+[ext_resource type="PackedScene" uid="uid://ecyvqdlsqdn5" path="res://scenes/windows/final/final_window.tscn" id="11_mric1"]
+[ext_resource type="PackedScene" uid="uid://byopq3vad0ivn" path="res://scenes/windows/coming_soon/coming_soon_window.tscn" id="12_q6imw"]
+[ext_resource type="PackedScene" uid="uid://bvbcn3vce4mpa" path="res://scenes/windows/mistakes/mistakes_window.tscn" id="18_ha3kl"]
+[ext_resource type="PackedScene" uid="uid://bpbpc2nxotdm8" path="res://scenes/windows/dialog/dialog_window.tscn" id="19_wreu6"]
+
+[node name="Play" type="Node" unique_id=883702195]
+script = ExtResource("1_fe62l")
+minigame_scenes = Dictionary[String, PackedScene]({
+"courier": ExtResource("4_q6imw"),
+"purchase": ExtResource("3_mric1"),
+"toppings": ExtResource("2_gcg6u")
+})
+stub_minigame = ExtResource("2_4dfl3")
+
+[node name="DirectorClient" type="Node" parent="." unique_id=234525797]
+script = ExtResource("1_u5o7e")
+
+[node name="UI" type="Control" parent="." unique_id=290239582]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI" unique_id=1836134039]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hud" parent="UI/VBoxContainer" unique_id=1312715434 instance=ExtResource("2_tdyfg")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Content" type="Control" parent="UI/VBoxContainer" unique_id=312830554]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="QuizView" parent="UI/VBoxContainer/Content" unique_id=99504734 instance=ExtResource("4_damvd")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="MinigameHost" type="Control" parent="UI/VBoxContainer/Content" unique_id=1123010804]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HintView" parent="UI/VBoxContainer/Content" unique_id=1489355318 instance=ExtResource("3_1phcp")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="SoundButton" parent="UI" unique_id=330419293 instance=ExtResource("10_mfrq5")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("11_blg3p")
+
+[node name="Windows" type="CanvasLayer" parent="." unique_id=1943166870]
+unique_name_in_owner = true
+layer = 10
+script = ExtResource("7_10igl")
+
+[node name="CycleResultWindow" parent="Windows" unique_id=656352947 instance=ExtResource("5_fe62l")]
+unique_name_in_owner = true
+
+[node name="DirectorWindow" parent="Windows" unique_id=1537652804 instance=ExtResource("9_bjecb")]
+unique_name_in_owner = true
+
+[node name="ShopWindow" parent="Windows" unique_id=1188243863 instance=ExtResource("10_gcg6u")]
+unique_name_in_owner = true
+
+[node name="FinalWindow" parent="Windows" unique_id=1438376117 instance=ExtResource("11_mric1")]
+unique_name_in_owner = true
+
+[node name="ComingSoonWindow" parent="Windows" unique_id=531983258 instance=ExtResource("12_q6imw")]
+unique_name_in_owner = true
+
+[node name="MistakesWindow" parent="Windows" unique_id=1373390345 instance=ExtResource("18_ha3kl")]
+unique_name_in_owner = true
+
+[node name="DialogWindow" parent="Windows" unique_id=1984393846 instance=ExtResource("19_wreu6")]
+unique_name_in_owner = true

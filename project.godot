@@ -14,7 +14,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="CoreTemplate"
+config/name="Internity"
 config/description="III generation template"
 config/tags=PackedStringArray("2026", "completed", "template")
 run/main_scene="uid://ppt54fko513k"

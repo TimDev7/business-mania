@@ -131,9 +131,10 @@ func new_minigame(game_id: String) -> RefCounted:
 
 
 func _build_minigames() -> void:
-	_toppings = ToppingsLogic.new(config.minigame_data.get("toppings", {}).get("orders", []), _rng)
+	var toppings_data: Dictionary = config.minigame_data.get("toppings", {})
+	_toppings = ToppingsLogic.new(toppings_data.get("orders", []), _rng, toppings_data.get("items", {}))
 	_purchase = PurchaseLogic.new(config.minigame_data.get("purchase", {}), _rng)
-	_courier = CourierLogic.new(config.courier_layouts, _rng)
+	_courier = CourierLogic.new(config.courier_layouts, _rng, config.minigame_data.get("courier", {}))
 
 
 func tick(delta: float) -> void:
@@ -199,7 +200,12 @@ func _evaluate(clean_text: String) -> Dictionary:
 		raw = await director_client.evaluate(payload)
 	var parsed := DirectorLogic.parse_response(raw)
 	if parsed.is_empty():
-		return DirectorLogic.fallback_result(config, _problem, lang)
+		var fallback := DirectorLogic.fallback_result(config, _problem, lang)
+		# На время тестов на телефоне: код причины в пометке (config director.show_error_code).
+		if config.director_setting("show_error_code") == true:
+			var reason := director_client.last_error if director_client != null else "no_client"
+			fallback["note"] = str(fallback.get("note", "")) + " [%s]" % reason
+		return fallback
 	return parsed
 
 

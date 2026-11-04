@@ -1,0 +1,8 @@
+{
+	"_note": "Музыка по настроению. volume - линейная громкость 0..1. Файлы лучше .ogg небольшого размера (веб-сборка).",
+	"volume": 0.5,
+	"moods": {
+		"calm": "res://assets/music/calm.ogg",
+		"vigorous": "res://assets/music/vigorous.ogg"
+	}
+}

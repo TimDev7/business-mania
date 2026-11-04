@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://cpesi0x4y5s3e"]
+
+[ext_resource type="PackedScene" uid="uid://dbxuyb5djs8as" path="res://template/ui/scenes/game_window.tscn" id="1_wrgtl"]
+[ext_resource type="Script" uid="uid://c47xagfxurryw" path="res://scenes/windows/shop/shop_window.gd" id="2_p4sjr"]
+[ext_resource type="PackedScene" uid="uid://574ms2tu1cn1" path="res://scenes/ui/buttons/button.tscn" id="3_8ngdm"]
+[ext_resource type="PackedScene" uid="uid://bwodvsfhq8m3j" path="res://scenes/windows/shop/shop_item.tscn" id="3_ahucp"]
+
+[node name="ShopWindow" unique_id=656352947 instance=ExtResource("1_wrgtl")]
+script = ExtResource("2_p4sjr")
+
+[node name="ColorRect" type="ColorRect" parent="BackButton" parent_id_path=PackedInt32Array(2070245851) index="0" unique_id=1194121287]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.49803922)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/PanelContainer" parent_id_path=PackedInt32Array(321713740) index="0" unique_id=1124291679]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/MarginContainer/PanelContainer/VBoxContainer" index="0" unique_id=578173790]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Магазин"
+metadata/tr_key = "shop_title"
+horizontal_alignment = 1
+
+[node name="PiggyLabel" type="RichTextLabel" parent="Control/MarginContainer/PanelContainer/VBoxContainer" index="1" unique_id=857011165]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Items" type="VBoxContainer" parent="Control/MarginContainer/PanelContainer/VBoxContainer" index="2" unique_id=1838464739]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="ShopItem" parent="Control/MarginContainer/PanelContainer/VBoxContainer/Items" index="0" unique_id=622688717 instance=ExtResource("3_ahucp")]
+layout_mode = 2
+game_id = "toppings"
+
+[node name="ShopItem2" parent="Control/MarginContainer/PanelContainer/VBoxContainer/Items" index="1" unique_id=471759876 instance=ExtResource("3_ahucp")]
+layout_mode = 2
+game_id = "purchase"
+
+[node name="ShopItem3" parent="Control/MarginContainer/PanelContainer/VBoxContainer/Items" index="2" unique_id=481655123 instance=ExtResource("3_ahucp")]
+layout_mode = 2
+game_id = "courier"
+
+[node name="NextButton" parent="Control/MarginContainer/PanelContainer/VBoxContainer" index="3" unique_id=330419293 instance=ExtResource("3_8ngdm")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Следующий день"
+metadata/tr_key = "btn_next_day"

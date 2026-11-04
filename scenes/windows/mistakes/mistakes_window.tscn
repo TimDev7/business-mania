@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bvbcn3vce4mpa"]
+
+[ext_resource type="PackedScene" uid="uid://dbxuyb5djs8as" path="res://template/ui/scenes/game_window.tscn" id="1_j12oo"]
+[ext_resource type="Script" uid="uid://dfwei4ny7b18w" path="res://scenes/windows/mistakes/mistakes_window.gd" id="2_dbon4"]
+[ext_resource type="PackedScene" uid="uid://574ms2tu1cn1" path="res://scenes/ui/buttons/button.tscn" id="3_ilmou"]
+
+[node name="MistakesWindow" unique_id=656352947 instance=ExtResource("1_j12oo")]
+script = ExtResource("2_dbon4")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/MarginContainer/PanelContainer" parent_id_path=PackedInt32Array(321713740) index="0" unique_id=1258280947]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/PanelContainer/ScrollContainer" index="0" unique_id=802878939]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer" index="0" unique_id=1296796105]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+
+[node name="ContinueButton" parent="Control/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer" index="1" unique_id=330419293 instance=ExtResource("3_ilmou")]
+unique_name_in_owner = true
+layout_mode = 2

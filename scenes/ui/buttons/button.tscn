@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://574ms2tu1cn1"]
+
+[ext_resource type="PackedScene" uid="uid://cxlr8nmotfbdk" path="res://template/ui/components/juicy_button_component.tscn" id="2_0ba0n"]
+
+[node name="Button" type="Button" unique_id=330419293]
+custom_minimum_size = Vector2(64, 80)
+offset_right = 8.0
+offset_bottom = 8.0
+autowrap_mode = 3
+
+[node name="JuicyButtonComponent" parent="." unique_id=437082904 instance=ExtResource("2_0ba0n")]

@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://0n1ampmdwof1"]
+
+[ext_resource type="Script" uid="uid://cu2bjxc480416" path="res://scenes/minigames/toppings/toppings_minigame.gd" id="1_x5cuc"]
+[ext_resource type="Texture2D" uid="uid://cgknflcvrjp7b" path="res://assets/textures/toppings/pizza.svg" id="2_qyd5j"]
+[ext_resource type="Texture2D" uid="uid://cxyewa58ncabk" path="res://assets/textures/icon.png" id="2_tkjky"]
+[ext_resource type="PackedScene" uid="uid://ches1wyl1mw1w" path="res://scenes/minigames/toppings/topping_chip.tscn" id="2_tlnfe"]
+[ext_resource type="Texture2D" uid="uid://cjavgfdy2vhi1" path="res://assets/textures/toppings/cheese.svg" id="5_x3jkn"]
+[ext_resource type="Texture2D" uid="uid://i0khc1p6pyhb" path="res://assets/textures/toppings/pepperoni.svg" id="6_tl3hm"]
+[ext_resource type="Texture2D" uid="uid://cjysg4hr0ctyy" path="res://assets/textures/toppings/mushroom.svg" id="7_vlhq0"]
+[ext_resource type="Texture2D" uid="uid://b74xubclnjoqw" path="res://assets/textures/toppings/olive.svg" id="8_22v2v"]
+[ext_resource type="Texture2D" uid="uid://cec1o4l28wum0" path="res://assets/textures/toppings/pepper.svg" id="9_sdkfl"]
+[ext_resource type="Texture2D" uid="uid://gc3gkftguqye" path="res://assets/textures/toppings/basil.svg" id="10_lfosr"]
+
+[node name="ToppingsMinigame" type="Control" unique_id=425690717]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x5cuc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=220025705]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="OrderLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=1774184007]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 120)
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+scroll_active = false
+
+[node name="Pizza" type="Control" parent="VBoxContainer" unique_id=1717039878]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 300)
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PizzaTexture" type="TextureRect" parent="VBoxContainer/Pizza" unique_id=594564678]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_qyd5j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PlacedTemplate" type="TextureRect" parent="VBoxContainer/Pizza" unique_id=1839201643]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+offset_right = 64.0
+offset_bottom = 64.0
+mouse_filter = 2
+texture = ExtResource("2_tkjky")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Tray" type="GridContainer" parent="VBoxContainer" unique_id=1164364129]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 3
+
+[node name="ToppingChip" parent="VBoxContainer/Tray" unique_id=538743571 instance=ExtResource("2_tlnfe")]
+layout_mode = 2
+topping_id = "cheese"
+icon_texture = ExtResource("5_x3jkn")
+
+[node name="ToppingChip2" parent="VBoxContainer/Tray" unique_id=1838501740 instance=ExtResource("2_tlnfe")]
+layout_mode = 2
+topping_id = "pepperoni"
+icon_texture = ExtResource("6_tl3hm")
+
+[node name="ToppingChip3" parent="VBoxContainer/Tray" unique_id=606052772 instance=ExtResource("2_tlnfe")]
+layout_mode = 2
+topping_id = "mushroom"
+icon_texture = ExtResource("7_vlhq0")
+
+[node name="ToppingChip4" parent="VBoxContainer/Tray" unique_id=685604851 instance=ExtResource("2_tlnfe")]
+layout_mode = 2
+topping_id = "olive"
+icon_texture = ExtResource("8_22v2v")
+
+[node name="ToppingChip5" parent="VBoxContainer/Tray" unique_id=1130039695 instance=ExtResource("2_tlnfe")]
+layout_mode = 2
+topping_id = "pepper"
+icon_texture = ExtResource("9_sdkfl")
+
+[node name="ToppingChip6" parent="VBoxContainer/Tray" unique_id=1532350404 instance=ExtResource("2_tlnfe")]
+layout_mode = 2
+topping_id = "basil"
+icon_texture = ExtResource("10_lfosr")
+
+[node name="DragGhost" type="TextureRect" parent="." unique_id=580681179]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 0
+offset_top = 35.0
+offset_right = 40.0
+offset_bottom = 35.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5

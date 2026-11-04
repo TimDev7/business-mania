@@ -1,0 +1,105 @@
+{
+	"_note": "Все тексты интерфейса и название валюты, RU / KK / EN. %d / %s - подстановки (в каждом языке их столько же, сколько в русском), %% - знак процента. Нет перевода -> RU -> EN. Казахский - ЧЕРНОВИК, нужна вычитка носителем.",
+	"links": {
+		"almau": "https://almau.edu.kz/"
+	},
+	"icons": {
+		"coin": "res://assets/textures/brand/fet_coin.svg",
+		"star_on": "res://assets/textures/ui/star_on.svg",
+		"star_off": "res://assets/textures/ui/star_off.svg",
+		"check": "res://assets/textures/ui/check.svg",
+		"cross": "res://assets/textures/ui/cross.svg",
+		"bulb": "res://assets/textures/ui/bulb.svg",
+		"sound_on": "res://assets/textures/ui/sound_on.svg",
+		"sound_off": "res://assets/textures/ui/sound_off.svg",
+		"skip": "res://assets/textures/ui/skip.svg",
+		"dot_on": "res://assets/textures/ui/dot_on.svg",
+		"dot_off": "res://assets/textures/ui/dot_off.svg",
+		"gift": "res://assets/textures/ui/gift.svg",
+		"piggy": "res://assets/textures/ui/piggy.svg",
+		"gauge": "res://assets/textures/ui/gauge.svg",
+		"gamepad": "res://assets/textures/ui/gamepad.svg",
+		"quiz": "res://assets/textures/ui/quiz.svg",
+		"lang_ru": "res://assets/textures/ui/lang_ru.svg",
+		"lang_kk": "res://assets/textures/ui/lang_kk.svg",
+		"lang_en": "res://assets/textures/ui/lang_en.svg"
+	},
+	"icon_sizes": {"coin": 26, "star": 44, "mark": 30, "row": 40, "dot": 16},
+	"currency": {
+		"ru": ["фет", "фета", "фетов"],
+		"kk": ["фет"],
+		"en": ["fet", "fets"]
+	},
+	"strings": {
+		"seconds_short": {"ru": "%d с", "kk": "%d с", "en": "%d s"},
+
+		"hud_day": {"ru": "День %d / %d", "kk": "Күн %d / %d", "en": "Day %d / %d"},
+		"hud_earned": {"ru": "Заработано %s / %s", "kk": "Табылды %s / %s", "en": "Earned %s / %s"},
+
+		"result_title": {"ru": "День %d из %d завершён", "kk": "Күн %d / %d аяқталды", "en": "Day %d of %d complete"},
+		"result_next_hint": {"ru": "Это ещё не конец! Дальше: кейс от куратора.", "kk": "Бұл әлі соңы емес! Алда: тәлімгердің кейсі.", "en": "This is not the end! Next: a case from your mentor."},
+		"result_next_hint_last": {"ru": "Почти готово! Остался кейс от куратора и итоги стажировки.", "kk": "Аз қалды! Тәлімгердің кейсі мен тағылымдама қорытындысы қалды.", "en": "Almost done! A mentor case and your internship results are left."},
+		"result_credit_closed": {"ru": "Кредит закрыт!", "kk": "Несие жабылды!", "en": "Loan repaid!"},
+		"result_earned": {"ru": "Заработано %s из %s", "kk": "Табылды %s / %s", "en": "Earned %s of %s"},
+		"result_return": {"ru": "Возврат %d%%", "kk": "Қайтарым %d%%", "en": "Repaid %d%%"},
+		"result_credit_bonus": {"ru": "Бонус за кредит +%s", "kk": "Несие үшін бонус +%s", "en": "Loan bonus +%s"},
+		"result_forgiven": {"ru": "Первый день учебный: остаток %s прощён", "kk": "Бірінші күн оқу күні: жетпеген %s кешірілді", "en": "The first day is training: the %s shortfall is forgiven"},
+		"result_shortfall": {"ru": "Не хватило: %s", "kk": "Жетпеді: %s", "en": "Shortfall: %s"},
+		"result_savings": {"ru": "В копилку: %s", "kk": "Жинаққа: %s", "en": "To savings: %s"},
+		"result_stats": {"ru": "Мини-игры %d/%d · квиз %d/%d", "kk": "Мини-ойындар %d/%d · викторина %d/%d", "en": "Mini-games %d/%d · quiz %d/%d"},
+		"btn_to_mentor": {"ru": "К куратору", "kk": "Тәлімгерге", "en": "To the mentor"},
+
+		"shop_title": {"ru": "Магазин", "kk": "Дүкен", "en": "Shop"},
+		"shop_level": {"ru": "Уровень %d / %d · награда +%s", "kk": "Деңгей %d / %d · сыйақы +%s", "en": "Level %d / %d · reward +%s"},
+		"shop_max": {"ru": "Максимум", "kk": "Максимум", "en": "Max"},
+		"shop_piggy": {"ru": "В копилке: %s", "kk": "Жинақта: %s", "en": "Savings: %s"},
+		"btn_next_day": {"ru": "Следующий день", "kk": "Келесі күн", "en": "Next day"},
+
+		"final_title": {"ru": "Стажировка завершена!", "kk": "Тағылымдама аяқталды!", "en": "Internship complete!"},
+		"final_piggy": {"ru": "Копилка: %s", "kk": "Жинақ: %s", "en": "Savings: %s"},
+		"final_scores": {"ru": "Оценки куратора: ", "kk": "Тәлімгер бағалары: ", "en": "Mentor scores: "},
+		"final_no_mistakes": {"ru": "Ошибок не было. Отличная работа!", "kk": "Қате болған жоқ. Тамаша жұмыс!", "en": "No mistakes. Great work!"},
+		"final_top_header": {"ru": "Над чем стоит поработать:", "kk": "Не үстінде жұмыс істеу керек:", "en": "What to work on:"},
+		"final_correct": {"ru": "  Верно: %s", "kk": "  Дұрысы: %s", "en": "  Correct: %s"},
+		"btn_learn_more": {"ru": "Углубиться", "kk": "Тереңірек білу", "en": "Learn more"},
+		"btn_new_day": {"ru": "Новый день", "kk": "Жаңа күн", "en": "New day"},
+
+		"title_brand": {"ru": "Internity", "kk": "Internity", "en": "Internity"},
+		"title_tagline": {"ru": "Internship Infinity · в честь AlmaU", "kk": "Internship Infinity · AlmaU құрметіне", "en": "Internship Infinity · in honour of AlmaU"},
+		"title_credit": {"ru": "Игра в честь AlmaU и Tatishev Foundation", "kk": "AlmaU және Tatishev Foundation құрметіне арналған ойын", "en": "A game in honour of AlmaU and Tatishev Foundation"},
+		"title_start": {"ru": "Начать стажировку", "kk": "Тағылымдаманы бастау", "en": "Start the internship"},
+
+		"btn_next": {"ru": "Далее", "kk": "Әрі қарай", "en": "Next"},
+		"btn_got_it": {"ru": "Понятно", "kk": "Түсінікті", "en": "Got it"},
+		"btn_skip": {"ru": "Пропустить", "kk": "Өткізіп жіберу", "en": "Skip"},
+		"btn_start_day": {"ru": "Начать день", "kk": "Күнді бастау", "en": "Start the day"},
+		"btn_continue": {"ru": "Дальше", "kk": "Әрі қарай", "en": "Continue"},
+		"btn_mistakes": {"ru": "Разбор ошибок", "kk": "Қателерді талдау", "en": "Review mistakes"},
+		"btn_submit": {"ru": "Ответить", "kk": "Жауап беру", "en": "Answer"},
+
+		"mentor_title": {"ru": "Куратор", "kk": "Тәлімгер", "en": "Mentor"},
+		"mentor_thinking": {"ru": "[wave]Куратор думает[/wave]", "kk": "[wave]Тәлімгер ойланып жатыр[/wave]", "en": "[wave]The mentor is thinking[/wave]"},
+		"privacy_warning": {"ru": "Не вводи личные данные!", "kk": "Жеке деректерді енгізбе!", "en": "Don't enter personal data!"},
+		"mentor_score": {"ru": "Оценка куратора: %d / 3", "kk": "Тәлімгер бағасы: %d / 3", "en": "Mentor's score: %d / 3"},
+		"mentor_missing": {"ru": "Не хватило: %s", "kk": "Жетіспеді: %s", "en": "Missing: %s"},
+		"mentor_better": {"ru": "Как лучше: %s", "kk": "Жақсырақ: %s", "en": "Better: %s"},
+		"mentor_bonus": {"ru": "Бонус куратора +%s · в копилку +%s (всего %s)", "kk": "Тәлімгер бонусы +%s · жинаққа +%s (барлығы %s)", "en": "Mentor bonus +%s · to savings +%s (total %s)"},
+
+		"mistakes_intro": {"ru": "Давай разберём, где ты ошибся в этот день.", "kk": "Бүгін қайда қателескеніңді талдайық.", "en": "Let's go over where you slipped today."},
+		"mistakes_you": {"ru": "Ты: %s", "kk": "Сен: %s", "en": "You: %s"},
+		"mistakes_timeout": {"ru": "время вышло", "kk": "уақыт бітті", "en": "time ran out"},
+		"mistakes_correct": {"ru": "Верно: %s", "kk": "Дұрысы: %s", "en": "Correct: %s"},
+		"mistakes_why": {"ru": "Почему: %s", "kk": "Неге: %s", "en": "Why: %s"},
+
+		"chars_counter": {"ru": "%d / %d", "kk": "%d / %d", "en": "%d / %d"},
+
+		"music_on": {"ru": "Музыка: вкл", "kk": "Музыка: қосулы", "en": "Music: on"},
+		"music_off": {"ru": "Музыка: выкл", "kk": "Музыка: өшірулі", "en": "Music: off"},
+
+		"toppings_need": {"ru": "Нужно: ", "kk": "Керек: ", "en": "Needed: "},
+		"toppings_wrong": {"ru": "Не то! Пицца выброшена.\n", "kk": "Қате! Пицца тасталды.\n", "en": "Wrong! The pizza is binned.\n"},
+
+		"coming_soon_title": {"ru": "Скоро", "kk": "Жақында", "en": "Coming soon"},
+		"coming_soon": {"ru": "Контент в разработке. Здесь будет учебный сайт с разбором тем.", "kk": "Мазмұн әзірленуде. Мұнда тақырыптарды талдайтын оқу сайты болады.", "en": "Content in development. A learning site with topic breakdowns will be here."}
+	}
+}

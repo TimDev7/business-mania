@@ -74,11 +74,11 @@ new_player() → start_cycle() → CYCLE ──(cycle_finished)──▶ CYCLE_R
 
 1. `var p := session.begin_director()` → `text`, `is_repeat`/`repeat_intro`, `input_seconds` (60), `max_chars` (150),
    `mistakes` (разбор ошибок цикла на примерах игрока).
-2. Фронтенд показывает поле и таймер 60 с; по таймеру или кнопке: `var r = await session.submit_director_answer(text)`.
+2. Фронтенд показывает поле; `input_seconds` в config.json - лимит времени (0 = без ограничения, таймера нет; сейчас 0). По таймеру (если задан) или кнопке: `var r = await session.submit_director_answer(text)`.
 3. `r`: `score` 0–3, `verdict`, `missing`, `better`, `is_fallback`, `note` («связь нестабильна»), `bonus`
    (0/100/200/300), `mistakes`, `savings_deposit`, `piggy`.
 
-Запасной вариант (нет URL/сети, 8 с без ответа, невалидный JSON): эталон, оценка 1 (+100), `is_fallback = true`.
+Запасной вариант (нет URL/сети, 12 с без ответа - `request_timeout_seconds`, невалидный JSON): эталон, оценка 1 (+100), `is_fallback = true`.
 Пустой ответ: 0 без запроса. Текст обрезается до 150 символов и склеивается в одну строку.
 
 ### Магазин, итог

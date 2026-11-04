@@ -13,6 +13,10 @@ var scenario: Dictionary = {}
 var budget: int = 100
 var step: int = 5
 var values: Dictionary = {}
+## {key: {"ru": ..., "en": ...}} - подписи ползунков для фронтенда.
+var labels: Dictionary = {}
+## Короткое правило игры для подписи над ситуацией: {"ru": ..., "en": ...}.
+var rule: Variant = {}
 
 var _bag: ShuffleBag
 var _start: Dictionary
@@ -22,7 +26,14 @@ func _init(purchase_data: Dictionary, rng: RandomNumberGenerator) -> void:
 	budget = int(purchase_data.get("budget", 100))
 	step = maxi(1, int(purchase_data.get("step", 5)))
 	_start = purchase_data.get("start", {})
+	labels = purchase_data.get("labels", {})
+	rule = purchase_data.get("rule", {})
 	_bag = ShuffleBag.new(purchase_data.get("scenarios", []), rng)
+
+
+func key_name(key: String, lang: String) -> String:
+	var n := Localizer.text(labels.get(key, key), lang)
+	return n if n != "" else key
 
 
 ## Берёт следующий сценарий и возвращает ползунки в стартовое положение.

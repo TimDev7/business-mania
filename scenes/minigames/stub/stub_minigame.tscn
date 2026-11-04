@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dbp3o6p3q554v"]
+
+[ext_resource type="Script" uid="uid://dvibbuthjh857" path="res://scenes/minigames/stub/stub_minigame.gd" id="1_0b3ho"]
+[ext_resource type="PackedScene" uid="uid://574ms2tu1cn1" path="res://scenes/ui/buttons/button.tscn" id="1_hqbl5"]
+[ext_resource type="Theme" uid="uid://cdb4r0lu8otrm" path="res://assets/themes/main.tres" id="1_sgn2v"]
+
+[node name="StubMinigame" type="VBoxContainer" unique_id=1129518014]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_sgn2v")
+theme_override_constants/separation = 16
+alignment = 1
+script = ExtResource("1_0b3ho")
+
+[node name="TitleLabel" type="Label" parent="." unique_id=68641614]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Minigame"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="SuccessButton" parent="." unique_id=330419293 instance=ExtResource("1_hqbl5")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Success"
+
+[node name="FailButton" parent="." unique_id=2142934206 instance=ExtResource("1_hqbl5")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Fail"

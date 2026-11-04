@@ -3,11 +3,12 @@
 [ext_resource type="Script" uid="uid://b0i7ves4gx8p6" path="res://game/scenes/background_manager/background_manager.gd" id="1_bnrlk"]
 
 [sub_resource type="Gradient" id="Gradient_bnrlk"]
-offsets = PackedFloat32Array(1)
-colors = PackedColorArray(0, 0, 0, 1)
+colors = PackedColorArray(0.14901961, 0.26666668, 0.49803922, 1, 0.8, 0.13333334, 0.15686275, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_bnrlk"]
 gradient = SubResource("Gradient_bnrlk")
+fill_from = Vector2(0.14825581, 1)
+fill_to = Vector2(0.8633721, 0)
 
 [node name="BackgroundManager" type="CanvasLayer" unique_id=38855730]
 layer = 0
