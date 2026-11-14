@@ -50,12 +50,28 @@ static func apply_language_font(lang: String) -> void:
 		return
 	var font_path := str(cfg.get("font", ""))
 	if font_path != "" and lang in cfg.get("font_languages", []):
-		var font := load(font_path) as Font
-		theme.default_font = font
-		if font != null and not font.has_char(0x04D9): # ә
+		var base := load(font_path) as Font
+		if base != null and not base.has_char(0x04D9): # ә
 			push_warning("UiStyle: в шрифте %s нет казахских букв" % font_path)
+		var font := _with_weight(base, int(cfg.get("font_weight", 0)))
+		theme.default_font = font
+		# Шрифты, заданные в самой теме для отдельных типов (Button и т.п.), перебивают default_font.
+		for type_name in theme.get_font_type_list():
+			for font_name in theme.get_font_list(type_name):
+				theme.set_font(font_name, type_name, font)
 	else:
 		theme.default_font = null
+
+
+## Переменный шрифт (Nunito и т.п.) без явного веса грузится в самом тонком (wght по умолчанию
+## 200). weight > 0 фиксирует вес. Ключ оси - числовой тег: строка "wght" движком игнорируется.
+static func _with_weight(base: Font, weight: int) -> Font:
+	if base == null or weight <= 0:
+		return base
+	var variation := FontVariation.new()
+	variation.base_font = base
+	variation.variation_opentype = {TextServerManager.get_primary_interface().name_to_tag("wght"): weight}
+	return variation
 
 
 static func _walk(node: Node, cfg: Dictionary, in_button: bool = false) -> void:

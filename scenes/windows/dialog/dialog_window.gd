@@ -8,6 +8,9 @@ class_name DialogWindow
 
 signal finished
 
+const SLIDE_TIME := 0.25
+const PIXEL_TEXT_COLOR := Color.BLACK
+
 @onready var speaker_label: Label = %SpeakerLabel
 @onready var text_label: Label = %TextLabel
 @onready var next_button: Button = %NextButton
@@ -19,10 +22,12 @@ signal finished
 var _pages: Array = []
 var _index := 0
 var _last_button_text := ""
+var _slide_tween: Tween
 
 
 func _ready() -> void:
 	super._ready()
+	_apply_pixel_look()
 	next_button.pressed.connect(_on_next_pressed)
 	skip_button.pressed.connect(_finish)
 	# «Пропустить» - компактная кнопка-иконка вместо вытянутой надписи.
@@ -32,6 +37,46 @@ func _ready() -> void:
 	skip_button.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	skip_button.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	skip_button.tooltip_text = UiText.t("btn_skip")
+
+
+## Белое окно: чёрный текст на белом фоне (рамку рисует стиль pixel_window.tres).
+func _apply_pixel_look() -> void:
+	speaker_label.add_theme_color_override("font_color", PIXEL_TEXT_COLOR)
+	text_label.add_theme_color_override("font_color", PIXEL_TEXT_COLOR)
+
+
+## Окно выезжает снизу экрана вместо анимации из AnimationPlayer.
+func open_window() -> void:
+	_kill_slide()
+	animation_player.stop()
+	visible = true
+	control.visible = true
+	control.modulate.a = 1.0
+	control.position.y = _offscreen_y()
+	back_button.modulate.a = 0.0
+	_slide_tween = create_tween().set_parallel(true)
+	_slide_tween.tween_property(control, "position:y", 0.0, SLIDE_TIME) \
+			.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	_slide_tween.tween_property(back_button, "modulate:a", 1.0, SLIDE_TIME)
+
+
+func close_window() -> void:
+	_kill_slide()
+	animation_player.stop()
+	_slide_tween = create_tween().set_parallel(true)
+	_slide_tween.tween_property(control, "position:y", _offscreen_y(), SLIDE_TIME) \
+			.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	_slide_tween.tween_property(back_button, "modulate:a", 0.0, SLIDE_TIME)
+	_slide_tween.chain().tween_callback(func() -> void: visible = false)
+
+
+func _offscreen_y() -> float:
+	return get_viewport().get_visible_rect().size.y
+
+
+func _kill_slide() -> void:
+	if _slide_tween:
+		_slide_tween.kill()
 
 
 ## pages - Story.intro() / Story.tutorial(id); last_button - надпись кнопки на последней

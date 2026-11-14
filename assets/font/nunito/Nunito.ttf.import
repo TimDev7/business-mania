@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c8sc0nibjd6im"
-path="res://.godot/imported/marimpa.regular.ttf-d1f7b58afbc26fe30133161e7ae14092.fontdata"
+uid="uid://b3lrvq25y2nbd"
+path="res://.godot/imported/Nunito.ttf-c8d7e26b4450ded0888bc5f00b07d228.fontdata"
 
 [deps]
 
-source_file="res://assets/font/marimpa.regular.ttf"
-dest_files=["res://.godot/imported/marimpa.regular.ttf-d1f7b58afbc26fe30133161e7ae14092.fontdata"]
+source_file="res://assets/font/nunito/Nunito.ttf"
+dest_files=["res://.godot/imported/Nunito.ttf-c8d7e26b4450ded0888bc5f00b07d228.fontdata"]
 
 [params]
 
@@ -22,7 +22,7 @@ msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
 modulate_color_glyphs=false
-hinting=1
+hinting=3
 subpixel_positioning=4
 keep_rounding_remainders=true
 oversampling=0.0

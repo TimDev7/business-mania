@@ -1,1 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><rect x="42" y="0" width="44" height="70" fill="#5f6368"/><rect x="30" y="62" width="68" height="50" rx="4" fill="#9fd3ee" stroke="#3b6ea8" stroke-width="4"/><path d="M22 66 L64 34 L106 66 Z" fill="#3b6ea8" stroke="#274a75" stroke-width="4" stroke-linejoin="round"/><rect x="54" y="84" width="20" height="28" fill="#7a4a10"/></svg>
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg version="1.1" width="128" height="128" viewBox="0 0 128000 128000" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<rect x="32000" y="0" width="64000" height="12000" fill="#696A6A" />
+<rect x="32000" y="12000" width="18000" height="9000" fill="#696A6A" />
+<rect x="50000" y="12000" width="28000" height="9000" fill="#000000" />
+<rect x="78000" y="12000" width="18000" height="9000" fill="#696A6A" />
+<rect x="32000" y="21000" width="9000" height="9000" fill="#696A6A" />
+<rect x="41000" y="21000" width="9000" height="9000" fill="#000000" />
+<rect x="50000" y="21000" width="28000" height="27000" fill="#306082" />
+<rect x="78000" y="21000" width="9000" height="9000" fill="#000000" />
+<rect x="87000" y="21000" width="9000" height="9000" fill="#696A6A" />
+<rect x="32000" y="30000" width="9000" height="9000" fill="#000000" />
+<rect x="41000" y="30000" width="9000" height="18000" fill="#306082" />
+<rect x="78000" y="30000" width="9000" height="18000" fill="#306082" />
+<rect x="87000" y="30000" width="9000" height="9000" fill="#000000" />
+<rect x="23000" y="39000" width="9000" height="66000" fill="#000000" />
+<rect x="32000" y="39000" width="9000" height="9000" fill="#306082" />
+<rect x="87000" y="39000" width="9000" height="9000" fill="#306082" />
+<rect x="96000" y="39000" width="9000" height="66000" fill="#000000" />
+<rect x="14000" y="48000" width="9000" height="9000" fill="#000000" />
+<rect x="32000" y="48000" width="64000" height="9000" fill="#000000" />
+<rect x="105000" y="48000" width="9000" height="9000" fill="#000000" />
+<rect x="32000" y="57000" width="64000" height="17000" fill="#639BFF" />
+<rect x="32000" y="74000" width="21000" height="22000" fill="#639BFF" />
+<rect x="53000" y="74000" width="20000" height="22000" fill="#663931" />
+<rect x="73000" y="74000" width="23000" height="22000" fill="#639BFF" />
+<rect x="32000" y="96000" width="64000" height="9000" fill="#000000" />
+</svg>

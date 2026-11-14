@@ -5,7 +5,7 @@
 [ext_resource type="Theme" uid="uid://cdb4r0lu8otrm" path="res://assets/themes/main.tres" id="2_yjwoi"]
 [ext_resource type="Script" uid="uid://8eufbk7n37sv" path="res://scenes/ui/sound_toggle.gd" id="3_gl121"]
 [ext_resource type="Texture2D" uid="uid://dmdc6o7ess3hg" path="res://assets/textures/brand/almau_logo.png" id="4_7hvf5"]
-[ext_resource type="Script" path="res://scenes/ui/language_toggle.gd" id="5_langtgl"]
+[ext_resource type="Script" uid="uid://cj2bftv3hlroy" path="res://scenes/ui/language_toggle.gd" id="5_langtgl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2efmm"]
 bg_color = Color(1, 1, 1, 1)
@@ -37,7 +37,7 @@ theme_override_constants/separation = 128
 alignment = 1
 
 [node name="Control" type="Control" parent="UI/VBoxContainer" unique_id=20489034]
-custom_minimum_size = Vector2(0, 128)
+custom_minimum_size = Vector2(0, 160)
 layout_mode = 2
 
 [node name="BrandLabel" type="RichTextLabel" parent="UI/VBoxContainer/Control" unique_id=222322319]
@@ -66,8 +66,8 @@ grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 22
 text = "Игра в честь AlmaU и Tatishev Foundation"
-metadata/tr_key = "title_credit"
 horizontal_alignment = 1
+metadata/tr_key = "title_credit"
 
 [node name="NewPlayerButton" parent="UI/VBoxContainer" unique_id=330419293 instance=ExtResource("2_ds13r")]
 unique_name_in_owner = true
@@ -105,7 +105,7 @@ grow_horizontal = 0
 grow_vertical = 0
 script = ExtResource("3_gl121")
 
-[node name="LanguageButton" parent="UI/MarginContainer/Control" instance=ExtResource("2_ds13r")]
+[node name="LanguageButton" parent="UI/MarginContainer/Control" unique_id=1767840945 instance=ExtResource("2_ds13r")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 1
@@ -114,6 +114,7 @@ anchor_top = 1.0
 anchor_bottom = 1.0
 offset_top = -128.0
 offset_right = 128.0
+offset_bottom = 0.0
 grow_vertical = 0
 script = ExtResource("5_langtgl")
 
